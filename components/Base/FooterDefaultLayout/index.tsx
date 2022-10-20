@@ -9,7 +9,9 @@ const FooterDefaultLayout = () => {
           "md:px-40 md:pt-24 md:text-left",
         )}
       >
-        <p className="text-center md:mt-16 mt-3">Copyright © 2022 . All rights reserved.</p>
+        <p className="text-center md:mt-16 mt-3">
+          Copyright © 2022 . All rights reserved.
+        </p>
       </div>
     </div>
   )
