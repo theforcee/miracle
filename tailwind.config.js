@@ -10,7 +10,7 @@ module.exports = {
   content: [
     "./utils/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
@@ -23,7 +23,7 @@ module.exports = {
       lg: "1200px",
       xl: "1368px",
       "2xl": "1536px",
-      main: "1440px"
+      main: "1440px",
     },
     colors: {
       main: "#FBC61D",
@@ -34,7 +34,7 @@ module.exports = {
       miracleOrange: "#FB7800",
       miracleRed: "#EB522F",
       miracleBlue: "#2F91EB",
-      ...colors
+      ...colors,
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1.125rem" }], // 12px/18px
@@ -48,13 +48,14 @@ module.exports = {
       "5xl": ["3rem", { lineHeight: "3.75rem" }], // 48px/60px
       "6xl": ["3.5rem", { lineHeight: "4rem" }], // 56px/64px
       "7xl": ["5rem", { lineHeight: "6.25rem" }], // 80px/100px
+      "16/22": ["16px", { lineHeight: "22px" }],
     },
 
     fontFamily: {
       miracleMedium: ["Outfit"],
-      miracleBold: ["Outfit"]
+      miracleBold: ["Outfit"],
     },
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 }
