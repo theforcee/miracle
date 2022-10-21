@@ -9,14 +9,16 @@ import Ticket from "./Ticket"
 
 const LandingPage = () => {
   return (
-    <div className="max-w-[1110px] m-auto pt-20">
+    <div className="w-full">
       <Banner />
-      <Ticket />
-      <Attendees />
-      <Expect />
-      <Speaker />
-      <Organizer />
-      <FAQ />
+      <div className="max-w-[1110px] m-auto">
+        <Ticket />
+        <Attendees />
+        <Expect />
+        <Speaker />
+        <Organizer />
+        <FAQ />
+      </div>
     </div>
   )
 }

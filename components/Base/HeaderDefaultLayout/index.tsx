@@ -7,26 +7,18 @@ import logo from "/public/logo.svg"
 
 const HeaderDefaultLayout = (props: any) => {
   return (
-    <>
+    <div className="bg-[rgba(0,0,0,0.1)] w-full fixed top-0 -translate-x-1/2 left-1/2 z-50 h-20">
       <nav
         className={clsx(
-          "absolute -translate-x-1/2 left-1/2 h-20 w-full flex items-center justify-between max-w-screen-main px-[120px] overflow-hidden",
-          "xs:px-[60px]",
-          "pl-5 pr-6",
+          "h-full w-full mx-auto flex items-center justify-between max-w-[1110px] overflow-hidden",
         )}
       >
         <Link href="/">
           <a>
-            <Image
-              src={logo}
-              width="192px"
-              height="42px"
-              layout="fixed"
-              alt=""
-            />
+            <Image src={logo} layout="fixed" alt="" />
           </a>
         </Link>
-        <div className={clsx("flex gap-5")}>
+        <div className={clsx("flex gap-5 uppercase")}>
           {headerRoutes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
               <a target={item.target}>{item.label}</a>
@@ -34,7 +26,7 @@ const HeaderDefaultLayout = (props: any) => {
           ))}
         </div>
       </nav>
-    </>
+    </div>
   )
 }
 

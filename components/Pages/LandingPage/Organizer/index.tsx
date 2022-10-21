@@ -1,14 +1,18 @@
 import Image from "next/image"
 import React from "react"
+import BorderAnimation from "../../../Base/BorderAnimation"
 import logoIcetea from "/public/images/logo-icetea.svg"
 
 const OrganizorBox = () => {
   return (
-    <div className="flex flex-col items-center border border-white rounded-[10px] px-[25.5px] py-[33px]">
-      <div className="relative h-7">
-        <Image src={logoIcetea} alt="" />
-      </div>
+    <div className="w-[206px]">
+      <BorderAnimation>
+        <div className="relative">
+          <Image src={logoIcetea} alt="" />
+        </div>
+      </BorderAnimation>
     </div>
+    // <div className="flex flex-col items-center border border-white rounded-[10px] px-[25.5px] py-[33px]">
   )
 }
 

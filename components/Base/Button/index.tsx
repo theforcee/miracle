@@ -1,5 +1,6 @@
 import React from "react"
 import clsx from "clsx"
+import styles from "./button.module.scss"
 
 type ButtonProps = {
   className?: string
@@ -10,8 +11,6 @@ type ButtonProps = {
 
 const buttonStyles = {
   hoverAnimated: "duration-500 hover:tracking-widest",
-  button:
-    "flex h-14 rounded-[60px] items-center tracking-wider text-lg font-birdMedium cursor-pointer"
 }
 
 const Button = (props: ButtonProps) => {
@@ -20,10 +19,11 @@ const Button = (props: ButtonProps) => {
   return (
     <div
       className={clsx(
-        buttonStyles.button,
+        styles.button,
+        "flex h-[50px] rounded-[100px] items-center tracking-wider text-2xl font-semibold px-6 cursor-pointer",
         !disabled && buttonStyles.hoverAnimated,
         disabled && "pointer-events-none",
-        className
+        className,
       )}
       // onClick={!disabled ? onClick : () => {}}
       onClick={onClick}
