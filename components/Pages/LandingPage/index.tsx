@@ -1,6 +1,7 @@
 import React from "react"
 import Attendees from "./Attendees"
 import Banner from "./Banner"
+import Expect from "./Expect"
 import FAQ from "./FAQ"
 import Organizer from "./Organizer"
 import Speaker from "./Speaker"
@@ -12,6 +13,7 @@ const LandingPage = () => {
       <Banner />
       <Ticket />
       <Attendees />
+      <Expect />
       <Speaker />
       <Organizer />
       <FAQ />

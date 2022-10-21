@@ -6,8 +6,8 @@ import imgSpeaker from "/public/images/speaker.png"
 const Speaker = () => {
   return (
     <div className="flex flex-col items-center mt-[120px]">
-      <h3 className="mt-[18px] text-4xl font-medium">Speaker line-up</h3>
-      <p className="text-16px text-center max-w-[726px]">
+      <h3 className="text-4xl font-medium">Speaker line-up</h3>
+      <p className="mt-[18px] text-16px text-center max-w-[726px]">
         Share their clear - sighted view on the market via noteworthy live
         panel, fireside chats, keynotes and pitching showcases, paving the way
         to networking circle.

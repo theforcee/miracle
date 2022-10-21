@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import url(./font.css);
+@import url(./swiper.css);
 
 html,
 body {

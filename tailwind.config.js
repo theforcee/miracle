@@ -51,6 +51,8 @@ module.exports = {
       "16/20": ["16px", { lineHeight: "20px" }],
       "16/22": ["16px", { lineHeight: "22px" }],
       "18/22": ["18px", { lineHeight: "22px" }],
+      "20/26": ["20px", { lineHeight: "26px" }],
+      "32/42": ["32px", { lineHeight: "42px" }],
     },
     fontFamily: {
       miracleMedium: ["Outfit"],
