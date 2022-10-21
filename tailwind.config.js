@@ -48,9 +48,10 @@ module.exports = {
       "5xl": ["3rem", { lineHeight: "3.75rem" }], // 48px/60px
       "6xl": ["3.5rem", { lineHeight: "4rem" }], // 56px/64px
       "7xl": ["5rem", { lineHeight: "6.25rem" }], // 80px/100px
+      "16/20": ["16px", { lineHeight: "20px" }],
       "16/22": ["16px", { lineHeight: "22px" }],
+      "18/22": ["18px", { lineHeight: "22px" }],
     },
-
     fontFamily: {
       miracleMedium: ["Outfit"],
       miracleBold: ["Outfit"],

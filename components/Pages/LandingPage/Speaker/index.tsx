@@ -5,7 +5,7 @@ import imgSpeaker from "/public/images/speaker.png"
 
 const Speaker = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mt-[120px]">
       <h3 className="mt-[18px] text-4xl font-medium">Speaker line-up</h3>
       <p className="text-16px text-center max-w-[726px]">
         Share their clear - sighted view on the market via noteworthy live
@@ -18,12 +18,17 @@ const Speaker = () => {
           .map((item, index) => {
             return (
               <div key={item + index} className="flex flex-col items-center">
-                <div className="relative w-[148px] h-[148px] rounded-full">
-                  <Image src={imgSpeaker} alt="" />
+                <div
+                  className="flex flex-col items-center w-full"
+                  style={{ background: "url(/images/bg-speaker.png)" }}
+                >
+                  <div className="relative w-[148px] h-[148px] rounded-full">
+                    <Image src={imgSpeaker} alt="" />
+                  </div>
+                  <span className="mt-3 font-medium">Esther Howard</span>
+                  <span>Position</span>
+                  <span>Organization</span>
                 </div>
-                <span className="mt-3 font-medium">Esther Howard</span>
-                <span>Position</span>
-                <span>Organization</span>
                 <div className="relative w-4 h-4 mt-2 cursor-pointer">
                   <Link href="#">
                     <Image src={iconLinkedin} alt="" />
