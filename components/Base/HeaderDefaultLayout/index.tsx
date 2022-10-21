@@ -10,14 +10,20 @@ const HeaderDefaultLayout = (props: any) => {
     <>
       <nav
         className={clsx(
-          "absolute -translate-x-1/2 left-1/2 h-20 w-full flex items-center justify-between max-w-screen-main px-[120px] text-black overflow-hidden",
+          "absolute -translate-x-1/2 left-1/2 h-20 w-full flex items-center justify-between max-w-screen-main px-[120px] overflow-hidden",
           "xs:px-[60px]",
           "pl-5 pr-6",
         )}
       >
         <Link href="/">
           <a>
-            <Image src={logo} width="192px" height="42px" layout="fixed" alt="" />
+            <Image
+              src={logo}
+              width="192px"
+              height="42px"
+              layout="fixed"
+              alt=""
+            />
           </a>
         </Link>
         <div className={clsx("flex gap-5")}>
