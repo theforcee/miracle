@@ -2,7 +2,7 @@ import React from "react"
 import { Disclosure, Transition } from "@headlessui/react"
 import clsx from "clsx"
 import Image from "next/image"
-import iconArrow from "/public/images/logo-icetea.svg"
+import iconArrow from "/public/images/icon-arrow-bottom.svg"
 
 type FaqTypes = {
   id: number
@@ -13,102 +13,124 @@ type FaqTypes = {
 const faqs: Array<FaqTypes> = [
   {
     id: 1,
-    question: "What is Firebird?",
-    answer: `Firebird is a stand-alone chain built with Cosmos SDK designed specifically for Web3 games and metaverse. It allows developers to create scalable and user-friendly real-time dApps with cheap costs and fast speed without ever compromising security. With Firebird, we focus on blockchain performance to boost users’ gaming experience and aim to create an efficient chain that enables fast and low-cost transactions, facilitating easy trading for in-game assets.`,
+    question: "1. Who should join Miracle Block 2022?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
   {
     id: 2,
-    question: "When is the mainnet launch?",
-    answer: "Firebird mainnet is expected to launch in December 2022.",
+    question: "2. Is Miracle Block 2022 an online, offline or hybrid event? ",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
   {
     id: 3,
-    question: "What can I do with my PKF tokens?",
-    answer: `PKF utility:
-    - Payment for transaction fees (computation & storage)
-    - Staking for validators to earn a share of block rewards
-    - Staking to participate in the on-chain governance process and earn rewards for voting on proposals`,
+    question: "3. Where is the MB2022 livestream location?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
   {
     id: 4,
-    question: "What is the contract address for PKF?",
-    answer:
-      "Official $PKF ERC-20 contract address: 0x8b39b70e39aa811b69365398e0aace9bee238aeb",
+    question: "4. When will the event start?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
   {
     id: 5,
-    question: "Why did Firebird build with Cosmos SDK?",
-    answer: `Cosmos is an internet of blockchains. Cosmos will make it simple to develop blockchain technology by overcoming the primary problems of earlier blockchain efforts and enabling chain interoperability.  Additionally, Cosmos SDK seeks to address the modern blockchain infrastructure's scalability, usability, and sovereignty.
-    By leveraging the aforementioned benefits of Cosmos, Firebird provides a platform that makes it possible to construct blockchain applications, Web3 games and services that are robust, secure, interoperable, and easy to use.`,
+    question: "5. What is the most special thing about this event? ",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
   {
     id: 6,
-    question:
-      "Does Firebird have a bug bounty program available at the moment?",
-    answer: `Firebird will have a bug bounty program after the testnet “Firefly” is launched.
-    More information about this program will be released soon. Let’s stay tuned to our channels for exclusive events and updates!`,
+    question: "6. How do I register for one of the events?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
   {
     id: 7,
-    question: "Where can I learn more about Firebird?",
-    answer: `Visit our blog, whitepaper, GitHub, and join social channels (Twitter, Telegram, Discord, Reddit) to learn more details about Firebird, access constantly updated information, and get support 24/7.`,
+    question:
+      "7. If I can’t join the event after buying the ticket, will I get refund?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
   {
     id: 8,
-    question: "What makes Firebird different from other chains?",
-    answer: `Firebird can solve most of the problems that blockchain gaming is now facing, like performance, scalability, interoperability, etc. Additionally, utilizing Icetea ecosystem, Firebird can support the full life cycle of a typical blockchain project (including preparation, blockchain development, token sales, NFT sales, game launch, player attraction, and metaverse experiences). 
-    The Firebird team is currently investigating further distinctive features to provide efficient services and the best user experience in the future.`,
+    question: "8.  Is there a dress code applied for the event?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+  },
+  {
+    id: 9,
+    question: "9.  Who is speaking at the event?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+  },
+  {
+    id: 10,
+    question: "10. Covid / QR-health-pass in Vietnam?",
+    answer: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
   },
 ]
 
 const FAQ = () => {
   return (
     <div>
-      {faqs.map((item) => (
-        <Disclosure key={item.id}>
-          {({ open }) => (
-            <div
-              className={clsx(
-                "flex flex-col w-full cursor-pointer rounded-[20px] overflow-hidden transition-colors",
-                open ? "bg-black text-white" : "bg-white text-black",
-              )}
-            >
-              <Disclosure.Button
-                className={clsx(
-                  "text-2xl font-semibold flex justify-between items-start gap-2 outline-none py-6 px-8",
-                )}
-              >
-                <span className="flex-1 block text-left">{item.question}</span>
-                <div className="relative w-5 h-5">
-                  <Image src={iconArrow} alt="" />
-                </div>
-              </Disclosure.Button>
-              <Transition
-                className="overflow-hidden"
-                enter="transition transition-[max-height] duration-500 ease-in"
-                enterFrom="transform max-h-0"
-                enterTo="transform max-h-screen"
-                leave="transition transition-[max-height] duration-500 ease-out"
-                leaveFrom="transform max-h-screen"
-                leaveTo="transform max-h-0"
-              >
-                <Disclosure.Panel className="text-lg opacity-80 whitespace-pre-line break-words">
-                  {({ close }) => (
-                    <span
-                      className="pb-6 px-8 block"
-                      onClick={() => {
-                        close()
-                      }}
+      <h3 className="mt-[120px] text-4xl font-medium text-center">FAQ</h3>
+      <div className="flex gap-5 mt-[60px]">
+        {[
+          { start: 0, end: 5 },
+          { start: 5, end: 10 },
+        ].map((sliceIndex) => (
+          <div key={sliceIndex.start} className="flex-1 flex flex-col gap-5">
+            {faqs.slice(sliceIndex.start, sliceIndex.end).map((item) => (
+              <Disclosure key={item.id}>
+                {({ open }) => (
+                  <div
+                    className={clsx(
+                      "flex flex-col gap-5 w-full cursor-pointer rounded-[20px] overflow-hidden transition-colors",
+                      open
+                        ? "bg-white text-black"
+                        : "bg-[#A5FAFF1A] text-white",
+                    )}
+                  >
+                    <Disclosure.Button
+                      className={clsx(
+                        "text-lg  font-semibold flex justify-between items-start gap-6 outline-none px-5 py-4",
+                      )}
                     >
-                      {item.answer}
-                    </span>
-                  )}
-                </Disclosure.Panel>
-              </Transition>
-            </div>
-          )}
-        </Disclosure>
-      ))}
+                      <span className="flex-1 block text-left">
+                        {item.question}
+                      </span>
+                      <div
+                        className={clsx(
+                          "relative w-8 h-8 flex rounded-full justify-center items-center transition",
+                          open ? "bg-black rotate-180" : "bg-[#44C4EC33]",
+                        )}
+                      >
+                        <Image src={iconArrow} alt="" />
+                      </div>
+                    </Disclosure.Button>
+                    <Transition
+                      className="overflow-hidden"
+                      enter="transition transition-[max-height] duration-500 ease-in"
+                      enterFrom="transform max-h-0"
+                      enterTo="transform max-h-screen"
+                      leave="transition transition-[max-height] duration-500 ease-out"
+                      leaveFrom="transform max-h-screen"
+                      leaveTo="transform max-h-0"
+                    >
+                      <Disclosure.Panel className="text-lg opacity-80 whitespace-pre-line break-words">
+                        {({ close }) => (
+                          <span
+                            className="pb-5 px-5 block"
+                            onClick={() => {
+                              close()
+                            }}
+                          >
+                            {item.answer}
+                          </span>
+                        )}
+                      </Disclosure.Panel>
+                    </Transition>
+                  </div>
+                )}
+              </Disclosure>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

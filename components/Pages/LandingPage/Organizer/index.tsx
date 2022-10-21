@@ -14,7 +14,7 @@ const OrganizorBox = () => {
 
 const Organizer = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mt-[66px]">
       <h3 className="text-4xl font-medium">Co-Organizer</h3>
       <div className="flex flex-wrap gap-5 mt-20 w-full justify-center">
         {Array(3)
