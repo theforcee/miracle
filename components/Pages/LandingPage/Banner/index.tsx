@@ -92,7 +92,9 @@ const Banner = () => {
           <span className="font-medium text-xl">
             Thursday, 08 December 2022 - Hanoi, Viet Nam
           </span>
-          <Button className="mt-6">Buy ticket</Button>
+          <Button className="mt-6" size="large">
+            Buy Ticket
+          </Button>
         </div>
         <div
           id="block"

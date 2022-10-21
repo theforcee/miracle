@@ -10,7 +10,8 @@ const HeaderDefaultLayout = (props: any) => {
     <div className="bg-[rgba(0,0,0,0.1)] w-full fixed top-0 -translate-x-1/2 left-1/2 z-50 h-20">
       <nav
         className={clsx(
-          "h-full w-full mx-auto flex items-center justify-between max-w-[1110px] overflow-hidden",
+          "h-full w-full mx-auto flex items-center justify-between max-w-[1110px] overflow-hidden px-6",
+          "lg:px-0",
         )}
       >
         <Link href="/">

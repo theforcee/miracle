@@ -31,7 +31,7 @@ const FooterDefaultLayout = () => {
             <div className="flex gap-4 items-center">
               {socials.map((item: any) => (
                 <Link key={item.title} href="">
-                  <div className="relative w-7">
+                  <div className="relative w-7 cursor-pointer">
                     <Image src={item.icon} alt={item.name} />
                   </div>
                 </Link>

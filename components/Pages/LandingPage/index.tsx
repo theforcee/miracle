@@ -11,7 +11,7 @@ const LandingPage = () => {
   return (
     <div className="w-full">
       <Banner />
-      <div className="max-w-[1110px] m-auto">
+      <div className="max-w-[1110px] m-auto px-6 lg:px-0">
         <Ticket />
         <Attendees />
         <Expect />
