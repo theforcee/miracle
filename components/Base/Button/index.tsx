@@ -7,29 +7,33 @@ type ButtonProps = {
   children: any
   onClick?: () => void
   disabled?: boolean
-}
-
-const buttonStyles = {
-  hoverAnimated: "duration-500 hover:tracking-widest",
+  size?: "large" | "normal" | "small"
 }
 
 const Button = (props: ButtonProps) => {
-  const { className = "", children, onClick, disabled = false } = props
+  const {
+    className = "",
+    children,
+    onClick,
+    disabled = false,
+    size = "normal",
+  } = props
 
   return (
-    <div
+    <button
       className={clsx(
         styles.button,
-        "flex h-[50px] rounded-[100px] items-center tracking-wider text-2xl font-semibold px-6 cursor-pointer",
-        !disabled && buttonStyles.hoverAnimated,
+        size === "large" &&
+          "px-6 py-[10px] text-22/28 font-semibold rounded-[100px] md:text-2xl",
+        size === "small" &&
+          "px-[15.76px] py-[6.57px] text-20/25 font-semibold rounded-[66px] md:text-16/20",
         disabled && "pointer-events-none",
         className,
       )}
-      // onClick={!disabled ? onClick : () => {}}
       onClick={onClick}
     >
       {children}
-    </div>
+    </button>
   )
 }
 

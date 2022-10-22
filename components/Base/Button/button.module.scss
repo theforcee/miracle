@@ -4,4 +4,11 @@
     #fbc41d 0%,
     #ee5225 100%
   );
+  transition: all 0.6s;
+  &:hover {
+    background: #fbc61d;
+  }
+  &:focus {
+    background: #f38820;
+  }
 }

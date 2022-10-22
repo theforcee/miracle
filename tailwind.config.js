@@ -34,6 +34,8 @@ module.exports = {
       miracleOrange: "#FB7800",
       miracleRed: "#EB522F",
       miracleBlue: "#2F91EB",
+      "miracleTransparent-10": "#A5FAFF1A",
+      "miracleTransparent-20": "#44C4EC33",
       ...colors,
     },
     fontSize: {
@@ -48,10 +50,17 @@ module.exports = {
       "5xl": ["3rem", { lineHeight: "3.75rem" }], // 48px/60px
       "6xl": ["3.5rem", { lineHeight: "4rem" }], // 56px/64px
       "7xl": ["5rem", { lineHeight: "6.25rem" }], // 80px/100px
+      "13/18": ["13px", { lineHeight: "18px" }],
+      "14/20": ["14px", { lineHeight: "20px" }],
       "16/20": ["16px", { lineHeight: "20px" }],
       "16/22": ["16px", { lineHeight: "22px" }],
       "18/22": ["18px", { lineHeight: "22px" }],
+      "20/25": ["20px", { lineHeight: "25px" }],
       "20/26": ["20px", { lineHeight: "26px" }],
+      "20/28": ["20px", { lineHeight: "28px" }],
+      "22/28": ["22px", { lineHeight: "28px" }],
+      "22/30": ["22px", { lineHeight: "30px" }],
+      "32/38": ["32px", { lineHeight: "38px" }],
       "32/42": ["32px", { lineHeight: "42px" }],
     },
     fontFamily: {

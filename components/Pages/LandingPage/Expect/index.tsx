@@ -53,13 +53,13 @@ const btnArrowStyles =
 const SwiperButtons = () => {
   const swiper = useSwiper()
   return (
-    <div className="mt-7 flex gap-3">
+    <div className="mt-7 flex gap-2 md:gap-3">
       <div className={btnArrowStyles} onClick={() => swiper.slidePrev()}>
         <Image src={iconArrow} alt="" layout="responsive" />
       </div>
       <div
         className={clsx(btnArrowStyles, "rotate-180")}
-        onClick={() => swiper.slidePrev()}
+        onClick={() => swiper.slideNext()}
       >
         <Image src={iconArrow} alt="" layout="responsive" />
       </div>
@@ -69,8 +69,16 @@ const SwiperButtons = () => {
 
 const Expect = () => {
   return (
-    <div className="mt-[120px]">
-      <h3 className="text-4xl font-medium text-center">What to expect?</h3>
+    <div className="mt-[60px] xs:mt-20 md:mt-[120px]">
+      <h3
+        className={clsx(
+          "text-2xl font-medium text-center",
+          "xs:text-3xl",
+          "md:text-4xl",
+        )}
+      >
+        What to expect?
+      </h3>
       <Swiper
         slidesPerView={1}
         autoplay={{
@@ -87,16 +95,41 @@ const Expect = () => {
       >
         {expects.map((expect) => (
           <SwiperSlide style={{ height: "100%" }} key={expect.title}>
-            <div className="mt-20 pb-10 flex justify-between items-center">
+            <div
+              className={clsx(
+                "mt-6 pb-10 flex flex-col justify-between items-center",
+                "xs:mt-10 ",
+                "md:mt-20 md:flex-row",
+              )}
+            >
               <div className="max-w-[480px]">
-                <h4 className="text-32/42 font-semibold">{expect.title}</h4>
-                <p className="mt-2 text-20/26 font-normal">
+                <h4
+                  className={clsx(
+                    "text-20/28 font-semibold",
+                    "xs:text-2xl",
+                    "md:text-32/42",
+                  )}
+                >
+                  {expect.title}
+                </h4>
+                <p
+                  className={clsx(
+                    "mt-1 xs:mt-2 text-13/18 font-normal",
+                    "xs:text-base",
+                    "md:text-20/26",
+                  )}
+                >
                   {expect.description}
                 </p>
-                <SwiperButtons />
+                <div className="hidden md:block">
+                  <SwiperButtons />
+                </div>
               </div>
-              <div className="relative">
+              <div className="relative rounded-[20px] mt-4 md:mt-0">
                 <Image src={expect.img} alt="" />
+              </div>
+              <div className="flex justify-center items-center md:hidden">
+                <SwiperButtons />
               </div>
             </div>
             <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />

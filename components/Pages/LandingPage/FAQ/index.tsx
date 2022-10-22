@@ -82,7 +82,7 @@ const FAQ = () => {
                       "flex flex-col gap-5 w-full cursor-pointer rounded-[20px] overflow-hidden transition-colors",
                       open
                         ? "bg-white text-black"
-                        : "bg-[#A5FAFF1A] text-white",
+                        : "bg-miracleTransparent-10 text-white",
                     )}
                   >
                     <Disclosure.Button
