@@ -17,7 +17,6 @@ const HeaderDefaultLayout = (props: any) => {
     if (scrollPosition > maxYOffset) return
     let newOpacity = scrollPosition / maxYOffset - 0.4
     setOpacity(newOpacity)
-    console.log(newOpacity)
   }, [scrollPosition])
 
   const handleScroll = () => {

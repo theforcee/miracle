@@ -1,6 +1,5 @@
-import React from "react"
 import Attendees from "./Attendees"
-import Banner from "./Banner"
+import BannerHome from "./BannerHome"
 import Expect from "./Expect"
 import FAQ from "./FAQ"
 import Organizer from "./Organizer"
@@ -10,7 +9,7 @@ import Ticket from "./Ticket"
 const LandingPage = () => {
   return (
     <div className="w-full">
-      <Banner />
+      <BannerHome />
       <div className="max-w-[1110px] m-auto">
         <Ticket />
         <Attendees />

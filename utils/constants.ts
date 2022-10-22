@@ -9,7 +9,7 @@ type HeadDefaultTypes = {
 
 export const headDefault: HeadDefaultTypes = {
   description: "Where global investors meet Web3 SEA builders",
-  image: "https://d1j2c9jkfhu70p.cloudfront.net/Thumbnail_2_7bc61c9253.png",
+  image: "",
   title: "Miracle Block",
   keywords: "",
 }
