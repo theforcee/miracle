@@ -50,7 +50,7 @@ const HeaderDefaultLayout = (props: any) => {
             <Image src={logo} layout="fixed" alt="" />
           </a>
         </Link>
-        <div className={clsx("flex gap-5 uppercase font-medium")}>
+        <div className={clsx("gap-5 uppercase font-medium hidden xs:flex")}>
           {headerRoutes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
               <a
@@ -63,6 +63,9 @@ const HeaderDefaultLayout = (props: any) => {
               </a>
             </Link>
           ))}
+        </div>
+        <div className={clsx("uppercase font-medium flex xs:hidden")}>
+          <span className="cursor-pointer">Menu</span>
         </div>
       </nav>
     </div>

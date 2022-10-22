@@ -16,8 +16,9 @@ const Ticket = () => {
   return (
     <div
       className={clsx(
-        "flex flex-col flex-wrap justify-center items-center gap-4 px-7",
-        "xs:flex-row xs:gap-5 md:px-0",
+        "flex flex-col flex-wrap justify-center items-center gap-4 px-7 mt-8",
+        "xs:flex-row xs:gap-5 xs:mt-[47px]",
+        "md:px-0",
       )}
     >
       {tickets.map((item) => (
@@ -25,7 +26,8 @@ const Ticket = () => {
           key={item.title}
           className={clsx(
             "flex flex-col justify-center items-center w-[272px] h-[272px] bg-miracleTransparent-10 rounded-xl",
-            "xs:w-[320px] xs:h-[320px]",
+            "xs:w-[320px] xs:h-[320px] ",
+            "sm:bg-transparent",
             "md:w-[356px] md:h-[356px]",
           )}
         >

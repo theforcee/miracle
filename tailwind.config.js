@@ -51,7 +51,9 @@ module.exports = {
       "6xl": ["3.5rem", { lineHeight: "4rem" }], // 56px/64px
       "7xl": ["5rem", { lineHeight: "6.25rem" }], // 80px/100px
       "13/18": ["13px", { lineHeight: "18px" }],
+      "13/24": ["13px", { lineHeight: "24px" }],
       "14/20": ["14px", { lineHeight: "20px" }],
+      "16/18": ["16px", { lineHeight: "18px" }],
       "16/20": ["16px", { lineHeight: "20px" }],
       "16/22": ["16px", { lineHeight: "22px" }],
       "18/22": ["18px", { lineHeight: "22px" }],
@@ -60,6 +62,7 @@ module.exports = {
       "20/28": ["20px", { lineHeight: "28px" }],
       "22/28": ["22px", { lineHeight: "28px" }],
       "22/30": ["22px", { lineHeight: "30px" }],
+      "22/34": ["22px", { lineHeight: "34px" }],
       "32/38": ["32px", { lineHeight: "38px" }],
       "32/42": ["32px", { lineHeight: "42px" }],
     },

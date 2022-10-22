@@ -2,8 +2,9 @@ import clsx from "clsx"
 import Image from "next/image"
 import { Autoplay, Lazy, Navigation, Pagination } from "swiper"
 import "swiper/css"
-import "swiper/css/pagination"
+// import "swiper/css/pagination"
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
+import { landingPageStyles } from "../styles"
 import iconArrow from "/public/images/icon-arrow-left.svg"
 import imgExpect1 from "/public/images/landing-page/expect1.png"
 import imgExpect2 from "/public/images/landing-page/expect2.png"
@@ -70,15 +71,7 @@ const SwiperButtons = () => {
 const Expect = () => {
   return (
     <div className="mt-[60px] xs:mt-20 md:mt-[120px]">
-      <h3
-        className={clsx(
-          "text-2xl font-medium text-center",
-          "xs:text-3xl",
-          "md:text-4xl",
-        )}
-      >
-        What to expect?
-      </h3>
+      <h3 className={landingPageStyles.heading3}>What to expect?</h3>
       <Swiper
         slidesPerView={1}
         autoplay={{
@@ -97,12 +90,13 @@ const Expect = () => {
           <SwiperSlide style={{ height: "100%" }} key={expect.title}>
             <div
               className={clsx(
-                "mt-6 pb-10 flex flex-col justify-between items-center",
-                "xs:mt-10 ",
-                "md:mt-20 md:flex-row",
+                "mt-6 flex flex-col justify-between items-center",
+                "xs:mt-10",
+                "sm:flex-row",
+                "md:mt-20",
               )}
             >
-              <div className="max-w-[480px]">
+              <div className="text-center mr-5 sm:text-left sm:max-w-[380px] md:max-w-[430px] lg:max-w-[480px]">
                 <h4
                   className={clsx(
                     "text-20/28 font-semibold",
@@ -121,14 +115,14 @@ const Expect = () => {
                 >
                   {expect.description}
                 </p>
-                <div className="hidden md:block">
+                <div className="hidden sm:block">
                   <SwiperButtons />
                 </div>
               </div>
-              <div className="relative rounded-[20px] mt-4 md:mt-0">
-                <Image src={expect.img} alt="" />
+              <div className="relative w-full rounded-[20px] mt-4 md:mt-0 md:max-w-[508px]">
+                <Image src={expect.img} alt="" layout="responsive" />
               </div>
-              <div className="flex justify-center items-center md:hidden">
+              <div className="flex justify-center items-center sm:hidden">
                 <SwiperButtons />
               </div>
             </div>

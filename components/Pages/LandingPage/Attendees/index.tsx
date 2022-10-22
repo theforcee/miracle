@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import Image from "next/image"
+import { landingPageStyles } from "../styles"
 import iconCLevel from "/public/images/landing-page/icon-c-level.svg"
 import iconInvestors from "/public/images/landing-page/icon-investors.svg"
 import iconMediaPartners from "/public/images/landing-page/icon-media-partners.svg"
@@ -15,15 +16,7 @@ const attendees = [
 const Attendees = () => {
   return (
     <div className="mt-[60px] xs:mt-20 md:mt-[107px]">
-      <h3
-        className={clsx(
-          "text-2xl font-medium text-center",
-          "xs:text-3xl",
-          "md:text-4xl",
-        )}
-      >
-        Attendees
-      </h3>
+      <h3 className={landingPageStyles.heading3}>Attendees</h3>
       <div className="flex flex-wrap justify-center gap-5 mt-7 xs:mt-12 md:mt-20 ">
         {attendees.map((item: any) => (
           <div

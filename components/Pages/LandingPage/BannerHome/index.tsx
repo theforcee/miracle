@@ -1,13 +1,15 @@
 import clsx from "clsx"
 import Image from "next/image"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import Button from "../../../Base/Button"
 import styles from "./bannerhome.module.scss"
 
 import imgLight from "public/images/light.png"
 import imgMagma from "public/images/magma.png"
 import imgMiracleBlock from "public/images/miracle-block.png"
+import imgMiracleBlockVertical from "public/images/miracle-block-vertical.svg"
 import imgMiracleTitle from "public/images/miracle-title.svg"
+import { landingPageStyles } from "../styles"
 
 const BannerHome = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0)
@@ -35,20 +37,32 @@ const BannerHome = () => {
   }, [])
 
   return (
-    <div className={clsx("h-[200vh] min-h-[1200px] relative overflow-hidden")}>
+    <div
+      className={clsx(
+        "h-[200vh] min-h-[1200px] relative overflow-hidden",
+        landingPageStyles.paddingX,
+      )}
+    >
       <div className="sticky h-full top-0 left-0 flex flex-col overflow-hidden z-[2]">
         <div
           className={clsx(
-            "relative z-[3] top-0 left-0 pt-[110px] text-center flex flex-col items-center",
+            "z-[3] top-0 left-0 pt-[110px] text-center flex flex-col items-center",
           )}
         >
-          <Image src={imgMiracleTitle} alt="" />
-          <span className="mt-6 text-[22px] font-medium">
-            Where global investors meet Web3 SEA builders
-          </span>
-          <span className="font-medium text-xl">
-            Thursday, 08 December 2022 - Hanoi, Viet Nam
-          </span>
+          <div className="relative hidden sm:block">
+            <Image src={imgMiracleTitle} alt="" />
+          </div>
+          <div className="relative sm:hidden">
+            <Image src={imgMiracleBlockVertical} alt="" />
+          </div>
+          <div className="max-w-[276px] flex flex-col">
+            <span className="mt-6 font-medium text-16/22 md:text-22/34">
+              Where global investors meet Web3 SEA builders
+            </span>
+            <span className="font-medium text-16/18 mt-2 md:mt-0 md:text-xl">
+              Thursday, 08 December 2022 - Hanoi, Viet Nam
+            </span>
+          </div>
           <Button className="mt-6" size="large">
             Buy Ticket
           </Button>
@@ -64,8 +78,21 @@ const BannerHome = () => {
             <Image src={imgMiracleBlock} objectFit="contain" alt="" />
           </div>
 
-          <p className="mt-auto text-4xl font-medium">What is Miracle Block</p>
-          <div className="grid grid-cols-2 max-w-[770px] mx-auto gap-[50px] mt-10">
+          <h3
+            className={clsx(
+              landingPageStyles.heading3,
+              "mt-[-209px] md:mt-[-171px]",
+            )}
+          >
+            What is Miracle Block
+          </h3>
+          <div
+            className={clsx(
+              "grid grid-cols-1 max-w-[770px] mx-auto gap-4 mt-8 text-16/22",
+              "sm:grid-cols-2 sm:gap-[50px]",
+              "md:mt-10",
+            )}
+          >
             <span>
               Miracle Block 2022 is a premier blockchain event where the leading
               voices, game changers, insiders of the industry gather and share

@@ -3,6 +3,7 @@ import { Disclosure, Transition } from "@headlessui/react"
 import clsx from "clsx"
 import Image from "next/image"
 import iconArrow from "/public/images/icon-arrow-bottom.svg"
+import { landingPageStyles } from "../styles"
 
 type FaqTypes = {
   id: number
@@ -66,14 +67,24 @@ const faqs: Array<FaqTypes> = [
 
 const FAQ = () => {
   return (
-    <div>
-      <h3 className="mt-[120px] text-4xl font-medium text-center">FAQ</h3>
-      <div className="flex gap-5 mt-[60px]">
+    <div className="mt-[72px] xs:mt-20 md:mt-[120px]">
+      <h3 className={landingPageStyles.heading3}>FAQ</h3>
+      <div
+        className={clsx(
+          "flex flex-col gap-[5px] mt-[23px]",
+          "xs:mt-10 xs:gap-2",
+          "sm:flex-row",
+          "md:mt-[60px] md:gap-5",
+        )}
+      >
         {[
           { start: 0, end: 5 },
           { start: 5, end: 10 },
         ].map((sliceIndex) => (
-          <div key={sliceIndex.start} className="flex-1 flex flex-col gap-5">
+          <div
+            key={sliceIndex.start}
+            className="flex-1 flex flex-col gap-[5px] xs:gap-2 md:gap-5"
+          >
             {faqs.slice(sliceIndex.start, sliceIndex.end).map((item) => (
               <Disclosure key={item.id}>
                 {({ open }) => (
@@ -87,7 +98,9 @@ const FAQ = () => {
                   >
                     <Disclosure.Button
                       className={clsx(
-                        "text-lg  font-semibold flex justify-between items-start gap-6 outline-none px-5 py-4",
+                        "text-13/24 font-semibold flex justify-between items-start gap-6 outline-none p-5",
+                        "xs:text-base",
+                        "md:text-lg md:py-4",
                       )}
                     >
                       <span className="flex-1 block text-left">

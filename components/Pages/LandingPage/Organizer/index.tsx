@@ -1,34 +1,51 @@
+import clsx from "clsx"
 import Image from "next/image"
 import React from "react"
 import BorderAnimation from "../../../Base/BorderAnimation"
+import { landingPageStyles } from "../styles"
 import logoIcetea from "/public/images/logo-icetea.svg"
 
 const OrganizorBox = () => {
   return (
-    <div className="w-[206px]">
+    <div>
       <BorderAnimation>
         <div className="relative">
           <Image src={logoIcetea} alt="" />
         </div>
       </BorderAnimation>
     </div>
-    // <div className="flex flex-col items-center border border-white rounded-[10px] px-[25.5px] py-[33px]">
   )
 }
 
 const Organizer = () => {
   return (
-    <div className="flex flex-col items-center mt-[66px]">
-      <h3 className="text-4xl font-medium">Co-Organizer</h3>
-      <div className="flex flex-wrap gap-5 mt-20 w-full justify-center">
+    <div className="flex flex-col mt-[60px] xs:mt-20 md:mt-[120px]">
+      <h3 className={landingPageStyles.heading3}>Co-Organizer</h3>
+      <div
+        className={clsx(
+          "grid grid-cols-2 gap-5 mt-7 justify-left items-center w-full",
+          "xs:mt-8",
+          "sm:grid-cols-3",
+          "md:mt-10 md:w-4/5",
+          "lg:w-3/5",
+        )}
+      >
         {Array(3)
           .fill(1)
           .map((item, index) => {
             return <OrganizorBox key={item + index} />
           })}
       </div>
-      <h3 className="mt-[18px] text-4xl font-medium">Sponsor </h3>
-      <div className="flex flex-wrap gap-5 mt-[84px] w-full justify-center">
+      <h3 className={clsx(landingPageStyles.heading3, "mt-7 xs:mt-8 md:mt-10")}>
+        Sponsor
+      </h3>
+      <div
+        className={clsx(
+          "grid grid-cols-2 gap-5 mt-10 justify-left items-center w-full",
+          "xs:mt-8 sm:grid-cols-3",
+          "md:mt-10",
+        )}
+      >
         {Array(15)
           .fill(1)
           .map((item, index) => {
