@@ -105,7 +105,7 @@ const FAQ = () => {
                       <div
                         className={clsx(
                           "relative w-8 h-8 flex rounded-full justify-center items-center transition",
-                          open ? "bg-black rotate-180" : "bg-[#44C4EC33]",
+                          "bg-[#44C4EC33]",
                         )}
                       >
                         <Image src={iconArrow} alt="" />
