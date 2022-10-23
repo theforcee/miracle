@@ -86,7 +86,7 @@ const FAQ = () => {
             className="flex-1 flex flex-col gap-[5px] xs:gap-2 md:gap-5"
           >
             {faqs.slice(sliceIndex.start, sliceIndex.end).map((item) => (
-              <Disclosure key={item.id} S>
+              <Disclosure key={item.id}>
                 {({ open }) => (
                   <div
                     className={clsx(
@@ -96,15 +96,12 @@ const FAQ = () => {
                   >
                     <Disclosure.Button
                       className={clsx(
-                        "text-13/19 font-semibold flex justify-between items-start gap-6 outline-none ",
+                        "text-13/18 font-semibold flex justify-between items-start gap-6 outline-none",
                         "xs:text-base",
                         "md:text-lg md:py-4",
-                        open && "pb-0",
                       )}
                     >
-                      <span className="flex-1 block text-left">
-                        {item.question}
-                      </span>
+                      <span className="flex-1 text-left">{item.question}</span>
                       <div
                         className={clsx(
                           "relative w-8 h-8 flex rounded-full justify-center items-center transition",
@@ -123,7 +120,7 @@ const FAQ = () => {
                       leaveFrom="transform max-h-screen"
                       leaveTo="transform max-h-0"
                     >
-                      <Disclosure.Panel className="text-xs xs:text-sm md:text-lg opacity-80 whitespace-pre-line break-words pr-8">
+                      <Disclosure.Panel className="text-xs xs:text-sm md:text-lg opacity-80 whitespace-pre-line break-words pr-">
                         {({ close }) => (
                           <span
                             className="block"
