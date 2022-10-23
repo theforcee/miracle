@@ -86,21 +86,20 @@ const FAQ = () => {
             className="flex-1 flex flex-col gap-[5px] xs:gap-2 md:gap-5"
           >
             {faqs.slice(sliceIndex.start, sliceIndex.end).map((item) => (
-              <Disclosure key={item.id}>
+              <Disclosure key={item.id} S>
                 {({ open }) => (
                   <div
                     className={clsx(
-                      "flex flex-col gap-5 w-full cursor-pointer rounded-[20px] overflow-hidden transition-colors",
-                      open
-                        ? "bg-white text-black"
-                        : "bg-miracleTransparent-10 text-white",
+                      "flex flex-col w-full cursor-pointer rounded-[20px] overflow-hidden transition",
+                      "bg-miracleTransparent-10 text-white p-5",
                     )}
                   >
                     <Disclosure.Button
                       className={clsx(
-                        "text-13/24 font-semibold flex justify-between items-start gap-6 outline-none p-5",
+                        "text-13/19 font-semibold flex justify-between items-start gap-6 outline-none ",
                         "xs:text-base",
                         "md:text-lg md:py-4",
+                        open && "pb-0",
                       )}
                     >
                       <span className="flex-1 block text-left">
@@ -124,10 +123,10 @@ const FAQ = () => {
                       leaveFrom="transform max-h-screen"
                       leaveTo="transform max-h-0"
                     >
-                      <Disclosure.Panel className="text-lg opacity-80 whitespace-pre-line break-words">
+                      <Disclosure.Panel className="text-xs xs:text-sm md:text-lg opacity-80 whitespace-pre-line break-words pr-8">
                         {({ close }) => (
                           <span
-                            className="pb-5 px-5 block"
+                            className="block"
                             onClick={() => {
                               close()
                             }}
