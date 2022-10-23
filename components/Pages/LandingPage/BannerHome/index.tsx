@@ -68,7 +68,7 @@ const BannerHome = () => {
           <div className="relative sm:hidden">
             <Image src={imgMiracleBlockVertical} alt="" />
           </div>
-          <div className="max-w-[276px] md:max-w-none flex flex-col">
+          <div className="max-w-[276px] flex flex-col sm:max-w-full">
             <span className="mt-6 font-medium text-16/22 md:text-22/34">
               Where global investors meet Web3 SEA builders
             </span>

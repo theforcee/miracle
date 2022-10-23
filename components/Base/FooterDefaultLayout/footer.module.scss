@@ -1,0 +1,28 @@
+.iconTelegram {
+  transition: all 0.1s;
+  background: url(/images/social/icon-telegram-gray.svg);
+  &:hover {
+    background: url(/images/social/icon-telegram-blue.svg);
+  }
+}
+.iconTwitter {
+  transition: all 0.1s;
+  background: url(/images/social/icon-twitter-gray.svg);
+  &:hover {
+    background: url(/images/social/icon-twitter-blue.svg);
+  }
+}
+.iconLinkedIn {
+  transition: all 0.1s;
+  background: url(/images/social/icon-linkedin-gray.svg);
+  &:hover {
+    background: url(/images/social/icon-linkedin-blue.svg);
+  }
+}
+.iconFacebook {
+  transition: all 0.1s;
+  background: url(/images/social/icon-facebook-gray.svg);
+  &:hover {
+    background: url(/images/social/icon-facebook-blue.svg);
+  }
+}
