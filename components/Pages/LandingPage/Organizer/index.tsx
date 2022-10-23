@@ -23,7 +23,7 @@ const Organizer = () => {
       <h3 className={landingPageStyles.heading3}>Co-Organizer</h3>
       <div
         className={clsx(
-          "grid grid-cols-2 gap-5 mt-7 justify-left items-center w-full",
+          "grid grid-cols-2 gap-5 mt-7 justify-left items-center w-full m-auto",
           "xs:mt-8",
           "sm:grid-cols-3",
           "md:mt-10 md:w-4/5",
@@ -43,7 +43,8 @@ const Organizer = () => {
         className={clsx(
           "grid grid-cols-2 gap-5 mt-10 justify-left items-center w-full",
           "xs:mt-8 sm:grid-cols-3",
-          "md:mt-10",
+          "md:mt-10 md:grid-cols-4",
+          "lg:grid-cols-5",
         )}
       >
         {Array(15)

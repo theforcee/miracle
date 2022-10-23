@@ -2,17 +2,14 @@ import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 import { landingPageStyles } from "../../Pages/LandingPage/styles"
+import styles from "./footer.module.scss"
 import logoMiracle from "/public/images/logo-full.svg"
-import iconFacebook from "/public/images/social/icon-facebook.svg"
-import iconLinkedin from "/public/images/social/icon-linkedin.svg"
-import iconTelegram from "/public/images/social/icon-telegram.svg"
-import iconTwitter from "/public/images/social/icon-twitter.svg"
 
 const socials = [
-  { icon: iconTelegram, name: "Telegram" },
-  { icon: iconTwitter, name: "Twitter" },
-  { icon: iconLinkedin, name: "Linkedin" },
-  { icon: iconFacebook, name: "Facebook" },
+  { name: "Telegram", className: styles.iconTelegram },
+  { name: "Twitter", className: styles.iconTwitter },
+  { name: "Linkedin", className: styles.iconLinkedIn },
+  { name: "Facebook", className: styles.iconFacebook },
 ]
 
 const FooterDefaultLayout = () => {
@@ -38,9 +35,12 @@ const FooterDefaultLayout = () => {
             <div className="flex gap-4 items-center">
               {socials.map((item: any) => (
                 <Link key={item.name} href="">
-                  <div className="relative w-6 cursor-pointer xs:w-7">
-                    <Image src={item.icon} alt={item.name} />
-                  </div>
+                  <div
+                    className={clsx(
+                      "relative w-6 h-6 cursor-pointer xs:w-7 xs:h-7",
+                      item.className,
+                    )}
+                  ></div>
                 </Link>
               ))}
             </div>
