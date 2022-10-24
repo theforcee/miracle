@@ -76,7 +76,7 @@ const BannerHome = () => {
       <div className="relative h-full top-0 left-0 flex flex-col overflow-hidden z-[2]">
         <div
           className={clsx(
-            "z-[3] top-0 left-0 pt-[110px] text-center flex flex-col items-center",
+            "z-[3] top-0 left-0 pt-[140px] text-center flex flex-col items-center",
           )}
         >
           <div className="relative hidden sm:block">
@@ -98,7 +98,7 @@ const BannerHome = () => {
           </Button>
         </div>
 
-        <div className="flex-1 mt-12 relative z-[3] flex flex-col items-center justify-center">
+        <div className="flex-1 mt-[70px] relative z-[3] flex flex-col items-center justify-center">
           <div className="flex-1 flex max-w-[800px]" id="miracle-block">
             <div id="miracle-image" className="relative origin-bottom h-fit">
               <Image src={imgMiracleBlock} objectFit="contain" alt="" />
