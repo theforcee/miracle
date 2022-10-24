@@ -104,6 +104,7 @@ const HeaderDefaultLayout = (props: any) => {
                 target={item.target}
                 className={clsx({
                   "text-main": asPath === item.uri,
+                  "pointer-events-none": item.disabled,
                 })}
               >
                 {item.label}
