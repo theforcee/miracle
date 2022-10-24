@@ -25,8 +25,10 @@ const Button = (props: ButtonProps) => {
         styles.button,
         size === "large" &&
           "px-6 py-[10px] text-22/28 font-semibold rounded-[100px] md:text-2xl",
+        size === "normal" &&
+          "px-6 py-[10px] text-13/18 font-semibold rounded-[100px] md:text-16/20",
         size === "small" &&
-          "px-[15.76px] py-[6.57px] text-20/25 font-semibold rounded-[66px] md:text-16/20",
+          "px-[15.76px] py-[6.57px] text-16/20  font-semibold rounded-[66px] md:text-16/20",
         disabled && "pointer-events-none",
         className,
       )}

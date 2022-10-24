@@ -8,6 +8,10 @@ import { landingPageStyles } from "../styles"
 import iconArrow from "/public/images/icon-arrow-left.svg"
 import imgExpect1 from "/public/images/landing-page/expect1.png"
 import imgExpect2 from "/public/images/landing-page/expect2.png"
+import imgExpect3 from "/public/images/landing-page/expect3.png"
+import imgExpect4 from "/public/images/landing-page/expect4.png"
+import imgExpect5 from "/public/images/landing-page/expect5.png"
+import imgExpect6 from "/public/images/landing-page/expect6.png"
 
 const expects = [
   {
@@ -23,25 +27,25 @@ const expects = [
       "Top 6 selected potential startups from ILAP, an accelerator program hosted by Icetea Labs - Polygon - Alpha DAO, will have a pitch session at the event. Early investment opportunities are open to discuss directly with the project's leader",
   },
   {
-    img: imgExpect2,
+    img: imgExpect3,
     title: "Business Expo Area",
     description:
       "Boost your Brand Awareness with face-to-face marketing, showcasing your latest work and leading to Direct Sales Opportunities companies exhibiting throughout the venue. Futurist sponsorships are a great way to gain exposure to new audiences and drive results. Sponsorship opportunities available now",
   },
   {
-    img: imgExpect2,
+    img: imgExpect4,
     title: "Networking zone & Private Party",
     description:
       "We arrange several networking zones at the hall where you have space to connect in-person with your new friends. VIP passes reserve access to Exclusive Dinner and Private meeting room which is designed for intimidating chat and discussing the finer points of potential deal with VIPs, speakers, sponsors, and project’s leaders",
   },
   {
-    img: imgExpect2,
+    img: imgExpect5,
     title: "Gamefi Tournament (optional)",
     description:
       "Experience  trending blockchain and traditional games on site to test your merit against one another despite that you are a professional or casual gamer. Fight by yourself or grab new friends and create a team to experience competitive gaming like never before and gain attracting awards with our finely tuned tournaments. Streaming and pre-sign-up available",
   },
   {
-    img: imgExpect2,
+    img: imgExpect6,
     title: "NFT Gallery (Optional)",
     description:
       "Bridging the gap between the crypto and art world featuring an NFT Pop up Gallery, with Interactive Displays giving users a physical connection to a collection. Available for purchase",

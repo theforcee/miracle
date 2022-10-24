@@ -16,7 +16,7 @@ const Speaker = () => {
       </p>
       <div
         className={clsx(
-          "grid grid-cols-2 gap-5 w-full mt-8 gap-y-9",
+          "grid grid-cols-2 gap-5 w-full mt-8 gap-y-8",
           "xs:mt-10 xs:gap-y-11",
           "sm:grid-cols-3",
           "md:grid-cols-4 md:mt-[62px]",

@@ -15,7 +15,7 @@ const attendees = [
 
 const Attendees = () => {
   return (
-    <div className="mt-[60px] xs:mt-20 md:mt-[107px]">
+    <div className="mt-[60px] xs:mt-20 md:mt-[57px]">
       <h3 className={landingPageStyles.heading3}>Attendees</h3>
       <div className="flex flex-wrap justify-center gap-5 mt-7 xs:mt-12 md:mt-20 ">
         {attendees.map((item: any) => (

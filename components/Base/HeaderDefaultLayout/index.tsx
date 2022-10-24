@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import { headerRoutes, RouteTypes } from "../../../utils/constants"
+import Button from "../Button"
 
 import logo from "/public/logo.svg"
 
@@ -92,7 +93,11 @@ const HeaderDefaultLayout = (props: any) => {
             <Image src={logo} layout="responsive" alt="" />
           </a>
         </Link>
-        <div className={clsx("gap-5 uppercase font-medium hidden xs:flex")}>
+        <div
+          className={clsx(
+            "gap-6 uppercase font-medium text-13/18 hidden sm:gap-10 md:text-base md:gap-12 xs:flex xs:items-center",
+          )}
+        >
           {headerRoutes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
               <a
@@ -105,6 +110,9 @@ const HeaderDefaultLayout = (props: any) => {
               </a>
             </Link>
           ))}
+          <Link href="#">
+            <Button size="normal">Buy Ticket</Button>
+          </Link>
         </div>
         <div
           className={clsx("uppercase font-medium flex xs:hidden")}

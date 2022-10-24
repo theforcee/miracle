@@ -71,7 +71,7 @@ const FAQ = () => {
       <h3 className={landingPageStyles.heading3}>FAQ</h3>
       <div
         className={clsx(
-          "flex flex-col gap-[5px] mt-[23px]",
+          "flex flex-col gap-[5px] mt-[28px]",
           "xs:mt-10 xs:gap-2",
           "sm:flex-row",
           "md:mt-[60px] md:gap-5",
@@ -91,14 +91,14 @@ const FAQ = () => {
                   <div
                     className={clsx(
                       "flex flex-col w-full cursor-pointer rounded-[20px] overflow-hidden transition",
-                      "bg-miracleTransparent-10 text-white p-5",
+                      "bg-miracleTransparent-10 text-white px-5 py-4",
                     )}
                   >
                     <Disclosure.Button
                       className={clsx(
                         "text-13/18 font-semibold flex justify-between items-start gap-6 outline-none",
                         "xs:text-base",
-                        "md:text-lg md:py-4",
+                        "md:text-lg",
                       )}
                     >
                       <span className="flex-1 text-left">{item.question}</span>
