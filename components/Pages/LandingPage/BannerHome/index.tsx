@@ -49,7 +49,7 @@ const BannerHome = () => {
       gsap.fromTo(
         elBlock,
         {
-          marginLeft: -200,
+          marginLeft: -100,
         },
         {
           marginLeft: 0,

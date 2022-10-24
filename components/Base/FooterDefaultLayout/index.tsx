@@ -5,11 +5,33 @@ import { landingPageStyles } from "../../Pages/LandingPage/styles"
 import styles from "./footer.module.scss"
 import logoMiracle from "/public/images/logo-full.svg"
 
-const socials = [
-  { name: "Telegram", className: styles.iconTelegram },
-  { name: "Twitter", className: styles.iconTwitter },
-  { name: "Linkedin", className: styles.iconLinkedIn },
-  { name: "Facebook", className: styles.iconFacebook },
+type SocialTypes = {
+  name: string
+  className: string
+  url: string
+}
+
+const socials: Array<SocialTypes> = [
+  {
+    name: "Telegram",
+    className: styles.iconTelegram,
+    url: "https://t.me/+npfyoRtLUvU3ZGU9",
+  },
+  {
+    name: "Twitter",
+    className: styles.iconTwitter,
+    url: "https://twitter.com/Icetea_Labs",
+  },
+  {
+    name: "Linkedin",
+    className: styles.iconLinkedIn,
+    url: "https://www.linkedin.com/company/icetea-labs",
+  },
+  {
+    name: "Facebook",
+    className: styles.iconFacebook,
+    url: "https://www.facebook.com/icetea.io",
+  },
 ]
 
 const FooterDefaultLayout = () => {
@@ -33,14 +55,16 @@ const FooterDefaultLayout = () => {
           </div>
           <div className="flex flex-col items-end">
             <div className="flex gap-4 items-center">
-              {socials.map((item: any) => (
-                <Link key={item.name} href="">
-                  <div
-                    className={clsx(
-                      "relative w-6 h-6 cursor-pointer xs:w-7 xs:h-7",
-                      item.className,
-                    )}
-                  ></div>
+              {socials.map((item: SocialTypes) => (
+                <Link key={item.name} href={item.url}>
+                  <a target="_blank" rel="noreffer">
+                    <div
+                      className={clsx(
+                        "relative w-6 h-6 cursor-pointer xs:w-7 xs:h-7",
+                        item.className,
+                      )}
+                    ></div>
+                  </a>
                 </Link>
               ))}
             </div>
