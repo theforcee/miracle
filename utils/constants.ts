@@ -18,6 +18,7 @@ export type RouteTypes = {
   label: string
   uri: string
   target: HTMLAttributeAnchorTarget
+  disabled: boolean
 }
 
 export const headerRoutes: Array<RouteTypes> = [
@@ -25,25 +26,30 @@ export const headerRoutes: Array<RouteTypes> = [
     label: "Home",
     target: "_self",
     uri: "/",
+    disabled: false,
   },
   {
     label: "Schedule",
     target: "_self",
     uri: "/schedule",
+    disabled: true,
   },
   {
     label: "Sponsor",
     target: "_self",
     uri: "/sponsor",
+    disabled: true,
   },
   {
     label: "Demo Day",
     target: "_self",
     uri: "/demo-day",
+    disabled: true,
   },
   {
     label: "Travel",
     target: "_self",
     uri: "/travel",
+    disabled: true,
   },
 ]
