@@ -1,49 +1,79 @@
 import clsx from "clsx"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef } from "react"
 import Button from "../../../Base/Button"
 import styles from "./bannerhome.module.scss"
 
+import gsap from "gsap"
+import ScrollTrigger from "gsap/dist/ScrollTrigger"
 import imgLight from "public/images/light.png"
 import imgMagma from "public/images/magma.png"
-import imgMiracleBlock from "public/images/miracle-block.png"
 import imgMiracleBlockVertical from "public/images/miracle-block-vertical.svg"
+import imgMiracleBlock from "public/images/miracle-block.png"
 import imgMiracleTitle from "public/images/miracle-title.svg"
 import { landingPageStyles } from "../styles"
 
 const BannerHome = () => {
-  const [scrollPosition, setScrollPosition] = useState<number>(0)
-  const [scale, setScale] = useState<number>(1)
+  const ref = useRef<any>()
+  gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
-    const maxYOffset = window.innerHeight
-    if (scrollPosition > maxYOffset) return
-    let newScale = 1 - scrollPosition / maxYOffset
-    if (newScale < 0.2) return
-    setScale(newScale)
-  }, [scrollPosition])
+    const element = ref.current
+    const elBlock = element.querySelector("#miracle-block")
+    const elImage = element.querySelector("#miracle-image")
+    const isMobile = window.innerWidth < 640
+    const minScale = isMobile ? 0.2 : 0.15
+    const space = isMobile ? 50 : 20
+    // console.log(elBlock.offsetHeight, elImage.offsetHeight, window.innerWidth)
 
-  const handleScroll = () => {
-    const position = window.pageYOffset
-    setScrollPosition(position)
-  }
+    gsap.fromTo(
+      elImage,
+      {
+        transform: "scale(1)",
+        y: 0,
+      },
+      {
+        transform: `scale(${minScale})`,
+        y: elBlock.offsetHeight - elImage.offsetHeight - space,
+        scrollTrigger: {
+          trigger: elBlock,
+          start: "top center",
+          end: "bottom top",
+          scrub: true,
+          // markers: true,
+        },
+      },
+    )
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true })
+    !isMobile &&
+      gsap.fromTo(
+        elBlock,
+        {
+          marginLeft: -100,
+        },
+        {
+          marginLeft: 0,
+          scrollTrigger: {
+            trigger: elBlock,
+            start: "top center",
+            end: "bottom top",
+            scrub: true,
+          },
+        },
+      )
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
+    // window.addEventListener("resize", () => {})
   }, [])
 
   return (
     <div
+      ref={ref}
       className={clsx(
         "h-[200vh] min-h-[1200px] relative overflow-hidden",
         landingPageStyles.paddingX,
       )}
     >
-      <div className="sticky h-full top-0 left-0 flex flex-col overflow-hidden z-[2]">
+      <div className="relative h-full top-0 left-0 flex flex-col overflow-hidden z-[2]">
         <div
           className={clsx(
             "z-[3] top-0 left-0 pt-[110px] text-center flex flex-col items-center",
@@ -67,23 +97,15 @@ const BannerHome = () => {
             Buy Ticket
           </Button>
         </div>
+
         <div className="flex-1 mt-12 relative z-[3] flex flex-col items-center justify-center">
-          <div
-            className="relative flex-1 max-w-[800px] origin-bottom"
-            style={{
-              transform: `scale(${scale})`,
-              transition: "transform 230ms ease-in-out",
-            }}
-          >
-            <Image src={imgMiracleBlock} objectFit="contain" alt="" />
+          <div className="flex-1 flex max-w-[800px]" id="miracle-block">
+            <div id="miracle-image" className="relative origin-bottom h-fit">
+              <Image src={imgMiracleBlock} objectFit="contain" alt="" />
+            </div>
           </div>
 
-          <h3
-            className={clsx(
-              landingPageStyles.heading3,
-              "mt-[-209px] md:mt-[-171px]",
-            )}
-          >
+          <h3 className={clsx(landingPageStyles.heading3)}>
             What is Miracle Block
           </h3>
           <div
