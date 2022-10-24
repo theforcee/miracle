@@ -9,8 +9,8 @@ const OrganizorBox = () => {
   return (
     <div>
       <BorderAnimation>
-        <div className="relative">
-          <Image src={logoIcetea} alt="" />
+        <div className="relative w-[120px] 3xs:w-[154px]">
+          <Image src={logoIcetea} layout="responsive" alt="" />
         </div>
       </BorderAnimation>
     </div>

@@ -16,8 +16,8 @@ const Speaker = () => {
       </p>
       <div
         className={clsx(
-          "grid grid-cols-2 gap-5  w-full mt-8",
-          "xs:mt-10 xs:gap-y-6",
+          "grid grid-cols-2 gap-5 w-full mt-8 gap-y-9",
+          "xs:mt-10 xs:gap-y-11",
           "sm:grid-cols-3",
           "md:grid-cols-4 md:mt-[62px]",
           "lg:grid-cols-5",
@@ -35,19 +35,30 @@ const Speaker = () => {
                     backgroundSize: "contain",
                   }}
                 >
-                  <div className="relative w-full rounded-full px-[22px] xs:px-[29px]">
+                  <div className="relative w-full rounded-xl px-[22px] xs:px-[29px]">
                     <Image src={imgSpeaker} alt="" layout="responsive" />
+                    <Link href="#">
+                      <div
+                        className={clsx(
+                          "absolute bottom-0 right-[22px] bg-[#0A66C2] w-6 h-6 flex items-center justify-center rounded-tl-xl rounded-br-xl cursor-pointer",
+                          "xs:right-[29px] xs:w-7 xs:h-7",
+                        )}
+                      >
+                        <div className="relative w-4 h-4 xs:w-[14.25px] xs:h-[14.25px]">
+                          <Image
+                            src={iconLinkedin}
+                            layout="responsive"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                   <span className="mt-3 text-lg font-medium">
                     Esther Howard
                   </span>
-                  <span className="text-16/22">Position</span>
+                  <span className="text-16/22 mt-0.5">Position</span>
                   <span className="text-16/22">Organization</span>
-                </div>
-                <div className="relative w-3 h-3 xs:w-4 xs:h-4 mt-2 cursor-pointer">
-                  <Link href="#">
-                    <Image src={iconLinkedin} alt="" />
-                  </Link>
                 </div>
               </div>
             )
