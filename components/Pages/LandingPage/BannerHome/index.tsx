@@ -45,6 +45,23 @@ const BannerHome = () => {
       },
     )
 
+    !isMobile &&
+      gsap.fromTo(
+        elBlock,
+        {
+          marginLeft: -200,
+        },
+        {
+          marginLeft: 0,
+          scrollTrigger: {
+            trigger: elBlock,
+            start: "top center",
+            end: "bottom top",
+            scrub: true,
+          },
+        },
+      )
+
     // window.addEventListener("resize", () => {})
   }, [])
 
