@@ -23,7 +23,7 @@ const Attendees = () => {
             key={item.title}
             className={clsx(
               "flex flex-col m-auto items-center justify-center w-full h-[164px] bg-miracleTransparent-10 rounded-xl",
-              "xs:w-[200px] xs:h-[200px]",
+              "xs:w-[200px] xs:h-[200px] xs:m-0",
               "md:w-[262px] md:h-[262px]",
             )}
           >

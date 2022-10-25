@@ -45,7 +45,7 @@ export const headerRoutes: Array<RouteTypes> = [
     label: "Demo Day",
     target: "_self",
     uri: "/demo-day",
-    disabled: true,
+    disabled: false,
   },
   {
     label: "Travel",

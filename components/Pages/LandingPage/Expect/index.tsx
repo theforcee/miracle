@@ -1,9 +1,7 @@
 import clsx from "clsx"
 import Image from "next/image"
-import { Autoplay, Lazy, Navigation, Pagination } from "swiper"
-import "swiper/css"
-// import "swiper/css/pagination"
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
+import { SwiperSlide, useSwiper } from "swiper/react"
+import BaseSwiper from "../../../Base/Swiper"
 import { landingPageStyles } from "../../styles"
 import iconArrow from "/public/images/icon-arrow-left.svg"
 import imgExpect1 from "/public/images/landing-page/expect1.png"
@@ -76,20 +74,7 @@ const Expect = () => {
   return (
     <div className="mt-[60px] xs:mt-20 md:mt-[120px]">
       <h3 className={landingPageStyles.heading3}>What to expect?</h3>
-      <Swiper
-        slidesPerView={1}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        loop
-        lazy
-        pagination={{
-          clickable: true,
-        }}
-        navigation
-        modules={[Lazy, Autoplay, Pagination, Navigation]}
-      >
+      <BaseSwiper>
         {expects.map((expect) => (
           <SwiperSlide style={{ height: "100%" }} key={expect.title}>
             <div
@@ -133,7 +118,7 @@ const Expect = () => {
             <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </BaseSwiper>
     </div>
   )
 }
