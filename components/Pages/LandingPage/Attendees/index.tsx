@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import Image from "next/image"
-import { landingPageStyles } from "../styles"
+import { landingPageStyles } from "../../styles"
 import iconCLevel from "/public/images/landing-page/icon-c-level.svg"
 import iconInvestors from "/public/images/landing-page/icon-investors.svg"
 import iconMediaPartners from "/public/images/landing-page/icon-media-partners.svg"
@@ -17,12 +17,12 @@ const Attendees = () => {
   return (
     <div className="mt-[60px] xs:mt-20 md:mt-[57px]">
       <h3 className={landingPageStyles.heading3}>Attendees</h3>
-      <div className="flex flex-wrap justify-center gap-5 mt-7 xs:mt-12 md:mt-20 ">
+      <div className="grid grid-cols-2 xs:flex xs:flex-wrap justify-center gap-5 mt-7 xs:mt-12 md:mt-20 ">
         {attendees.map((item: any) => (
           <div
             key={item.title}
             className={clsx(
-              "flex flex-col items-center justify-center w-[164px] h-[164px] bg-miracleTransparent-10 rounded-xl",
+              "flex flex-col m-auto items-center justify-center w-full h-[164px] bg-miracleTransparent-10 rounded-xl",
               "xs:w-[200px] xs:h-[200px]",
               "md:w-[262px] md:h-[262px]",
             )}
@@ -45,7 +45,12 @@ const Attendees = () => {
             >
               {item.title}
             </span>
-            <span className={clsx("text-14/20 font-medium", "text-18/22")}>
+            <span
+              className={clsx(
+                "text-14/20 font-medium",
+                "xs:text-16/20 md:text-18/22",
+              )}
+            >
               {item.subtitle}
             </span>
           </div>

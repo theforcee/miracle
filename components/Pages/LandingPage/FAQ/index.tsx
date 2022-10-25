@@ -3,7 +3,7 @@ import { Disclosure, Transition } from "@headlessui/react"
 import clsx from "clsx"
 import Image from "next/image"
 import iconArrow from "/public/images/icon-arrow-bottom.svg"
-import { landingPageStyles } from "../styles"
+import { landingPageStyles } from "../../styles"
 
 type FaqTypes = {
   id: number
@@ -71,9 +71,9 @@ const FAQ = () => {
       <h3 className={landingPageStyles.heading3}>FAQ</h3>
       <div
         className={clsx(
-          "flex flex-col gap-[5px] mt-[28px]",
+          "grid grid-cols-1 gap-[5px] mt-[28px]",
           "xs:mt-10 xs:gap-2",
-          "sm:flex-row",
+          "sm:grid-cols-2",
           "md:mt-[60px] md:gap-5",
         )}
       >
@@ -83,7 +83,7 @@ const FAQ = () => {
         ].map((sliceIndex) => (
           <div
             key={sliceIndex.start}
-            className="flex-1 flex flex-col gap-[5px] xs:gap-2 md:gap-5"
+            className="flex-1 grid grid-cols-1 gap-[5px] xs:gap-2 md:gap-5"
           >
             {faqs.slice(sliceIndex.start, sliceIndex.end).map((item) => (
               <Disclosure key={item.id}>

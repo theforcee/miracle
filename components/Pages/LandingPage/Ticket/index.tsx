@@ -14,46 +14,47 @@ const tickets = [
 
 const Ticket = () => {
   return (
-    <div
-      className={clsx(
-        "flex flex-col flex-wrap justify-center items-center gap-4 px-7 mt-8",
-        "xs:flex-row xs:gap-5 xs:mt-[47px]",
-        "md:px-0",
-      )}
-    >
-      {tickets.map((item) => (
-        <div
-          key={item.title}
-          className={clsx(
-            "flex flex-col justify-center items-center w-full max-w-[272px] h-[272px] bg-miracleTransparent-10 rounded-xl",
-            "xs:w-[320px] xs:h-[320px]",
-            "sm:bg-transparent",
-            "md:w-[356px] md:h-[356px]",
-          )}
-        >
+    <div className="flex items-center px-7 mt-8 xs:mt-[47px] md:px-0">
+      <div
+        className={clsx(
+          "grid grid-cols-1 mx-auto justify-center items-center gap-4 w-full m-auto max-w-[272px]",
+          "xs:flex xs:flex-wrap xs:max-w-full xs:gap-5",
+        )}
+      >
+        {tickets.map((item) => (
           <div
+            key={item.title}
             className={clsx(
-              "relative w-16 h-16 flex justify-center items-center",
-              "xs:w-20 xs:h-20",
+              "flex flex-col justify-center items-center h-[272px] bg-miracleTransparent-10 rounded-xl",
+              "xs:w-[320px] xs:h-[320px]",
+              "sm:bg-transparent",
+              "md:w-[356px] md:h-[356px]",
             )}
           >
-            <Image src={item.icon} alt={item.title} />
+            <div
+              className={clsx(
+                "relative w-16 h-16 flex justify-center items-center",
+                "xs:w-20 xs:h-20",
+              )}
+            >
+              <Image src={item.icon} alt={item.title} />
+            </div>
+            <span
+              className={clsx(
+                "mt-[27px] max-w-[200px] text-22/30 text-center font-medium",
+                "xs:text-[31.5px] xs:leading-[43.76px] xs:max-w-[215px]",
+              )}
+            >
+              {item.title}
+            </span>
+            <div className="mt-5 xs:mt-[28.45px]">
+              <Link href="#">
+                <Button size="small">Buy Ticket</Button>
+              </Link>
+            </div>
           </div>
-          <span
-            className={clsx(
-              "mt-[27px] max-w-[200px] text-22/30 text-center font-medium",
-              "xs:text-[31.5px] xs:leading-[43.76px] xs:max-w-[215px]",
-            )}
-          >
-            {item.title}
-          </span>
-          <div className="mt-5 xs:mt-[28.45px]">
-            <Link href="#">
-              <Button size="small">Buy Ticket</Button>
-            </Link>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
