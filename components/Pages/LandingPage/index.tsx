@@ -6,7 +6,7 @@ import FAQ from "./FAQ"
 import Organizer from "./Organizer"
 import Schedule from "./Schedule"
 import Speaker from "./Speaker"
-import { landingPageStyles } from "./styles"
+import { landingPageStyles } from "../styles"
 import Ticket from "./Ticket"
 
 const LandingPage = () => {

@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
-import { landingPageStyles } from "../../Pages/LandingPage/styles"
+import { landingPageStyles } from "../../Pages/styles"
 import styles from "./footer.module.scss"
 import logoMiracle from "/public/images/logo-full.svg"
 

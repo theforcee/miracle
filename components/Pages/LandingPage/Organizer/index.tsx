@@ -2,7 +2,7 @@ import clsx from "clsx"
 import Image from "next/image"
 import React from "react"
 import BorderAnimation from "../../../Base/BorderAnimation"
-import { landingPageStyles } from "../styles"
+import { landingPageStyles } from "../../styles"
 import logoIcetea from "/public/images/logo-icetea.svg"
 
 const OrganizorBox = () => {

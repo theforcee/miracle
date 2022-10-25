@@ -11,7 +11,7 @@ import imgMagma from "public/images/magma.png"
 import imgMiracleBlockVertical from "public/images/miracle-block-vertical.svg"
 import imgMiracleBlock from "public/images/miracle-block.png"
 import imgMiracleTitle from "public/images/miracle-title.svg"
-import { landingPageStyles } from "../styles"
+import { landingPageStyles } from "../../styles"
 
 const BannerHome = () => {
   const ref = useRef<any>()

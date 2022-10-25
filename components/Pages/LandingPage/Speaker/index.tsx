@@ -1,9 +1,9 @@
 import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
-import { landingPageStyles } from "../styles"
+import { landingPageStyles } from "../../styles"
 import iconLinkedin from "/public/images/social/icon-linkedin.svg"
-import imgSpeaker from "/public/images/speaker.png"
+import imgSpeaker from "/public/images/landing-page/speaker.png"
 
 const Speaker = () => {
   return (
@@ -31,7 +31,7 @@ const Speaker = () => {
                 <div
                   className="flex flex-col items-center w-full"
                   style={{
-                    background: "url(/images/bg-speaker.png)",
+                    background: "url(/images/landing-page/bg-speaker.png)",
                     backgroundSize: "contain",
                   }}
                 >

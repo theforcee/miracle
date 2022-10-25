@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import React from "react"
-import { landingPageStyles } from "../styles"
+import { landingPageStyles } from "../../styles"
 import styles from "./schedule.module.scss"
 
 const schedules = {
