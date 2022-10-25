@@ -4,6 +4,7 @@ import BannerHome from "./BannerHome"
 import Expect from "./Expect"
 import FAQ from "./FAQ"
 import Organizer from "./Organizer"
+import Schedule from "./Schedule"
 import Speaker from "./Speaker"
 import { landingPageStyles } from "./styles"
 import Ticket from "./Ticket"
@@ -21,6 +22,7 @@ const LandingPage = () => {
         <Speaker />
         <Organizer />
         <FAQ />
+        <Schedule />
       </div>
     </div>
   )

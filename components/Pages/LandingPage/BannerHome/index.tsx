@@ -114,8 +114,8 @@ const BannerHome = () => {
           </h3>
           <div
             className={clsx(
-              "grid grid-cols-1 max-w-[770px] mx-auto gap-4 mt-8 text-16/22",
-              "sm:grid-cols-2 sm:gap-[50px]",
+              "grid grid-cols-1 max-w-[770px] mx-auto gap-4 mt-8 text-16/22 text-center",
+              "sm:grid-cols-2 sm:gap-[50px] sm:text-left",
               "md:mt-10",
             )}
           >

@@ -25,8 +25,8 @@ const Ticket = () => {
         <div
           key={item.title}
           className={clsx(
-            "flex flex-col justify-center items-center w-[272px] h-[272px] bg-miracleTransparent-10 rounded-xl",
-            "xs:w-[320px] xs:h-[320px] ",
+            "flex flex-col justify-center items-center w-full max-w-[272px] h-[272px] bg-miracleTransparent-10 rounded-xl",
+            "xs:w-[320px] xs:h-[320px]",
             "sm:bg-transparent",
             "md:w-[356px] md:h-[356px]",
           )}
