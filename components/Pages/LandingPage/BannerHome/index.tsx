@@ -45,22 +45,21 @@ const BannerHome = () => {
       },
     )
 
-    !isMobile &&
-      gsap.fromTo(
-        elBlock,
-        {
-          marginLeft: -100,
+    gsap.fromTo(
+      elBlock,
+      {
+        marginLeft: isMobile ? -60 : -100,
+      },
+      {
+        marginLeft: 0,
+        scrollTrigger: {
+          trigger: elBlock,
+          start: "top center",
+          end: "bottom top",
+          scrub: true,
         },
-        {
-          marginLeft: 0,
-          scrollTrigger: {
-            trigger: elBlock,
-            start: "top center",
-            end: "bottom top",
-            scrub: true,
-          },
-        },
-      )
+      },
+    )
 
     // window.addEventListener("resize", () => {})
   }, [])
@@ -80,7 +79,7 @@ const BannerHome = () => {
           )}
         >
           <div className="relative hidden sm:block">
-            <Image src={imgMiracleTitle} alt="" />
+            <Image src={imgMiracleTitle} alt="" priority />
           </div>
           <div className="relative sm:hidden">
             <Image src={imgMiracleBlockVertical} alt="" />
@@ -101,7 +100,12 @@ const BannerHome = () => {
         <div className="flex-1 mt-[70px] relative z-[3] flex flex-col items-center justify-center">
           <div className="flex-1 flex max-w-[800px]" id="miracle-block">
             <div id="miracle-image" className="relative origin-bottom h-fit">
-              <Image src={imgMiracleBlock} objectFit="contain" alt="" />
+              <Image
+                src={imgMiracleBlock}
+                objectFit="contain"
+                alt=""
+                priority
+              />
             </div>
           </div>
 
