@@ -41,8 +41,7 @@
   & > div {
     background: #0c1022;
     position: absolute;
-    width: calc(100% - 1px);
-    height: calc(100% - 1px);
+    inset: 1px;
     z-index: 1;
     border-radius: 10px;
     display: flex;
