@@ -2,6 +2,7 @@ import clsx from "clsx"
 import React from "react"
 import { landingPageStyles } from "../styles"
 import Showcase from "./Showcase"
+import TopProject from "./TopProject"
 
 const DemoDay = () => {
   return (
@@ -13,6 +14,7 @@ const DemoDay = () => {
         )}
       >
         <Showcase />
+        <TopProject />
       </div>
     </div>
   )

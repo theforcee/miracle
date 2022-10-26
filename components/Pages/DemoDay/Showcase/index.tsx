@@ -60,7 +60,7 @@ const showcases = [
 
 const Showcase = () => {
   return (
-    <div className="">
+    <div>
       <h3 className={landingPageStyles.heading3}>ILAP startups showcase</h3>
       <div className="mt-1 flex flex-col items-center text-16/22 font-normal">
         <span>

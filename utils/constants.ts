@@ -15,6 +15,14 @@ export const headDefault: HeadDefaultTypes = {
   keywords: "",
 }
 
+export const URLS = {
+  HOME: "/",
+  SCHEDULE: "/schedule",
+  SPONSOR: "/sponsor",
+  DEMO_DAY: "/demo-day",
+  TRAVEL: "/travel",
+}
+
 export type RouteTypes = {
   label: string
   uri: string
@@ -26,31 +34,31 @@ export const headerRoutes: Array<RouteTypes> = [
   {
     label: "Home",
     target: "_self",
-    uri: "/",
+    uri: URLS.HOME,
     disabled: false,
   },
   {
     label: "Schedule",
     target: "_self",
-    uri: "/schedule",
+    uri: URLS.SCHEDULE,
     disabled: true,
   },
   {
     label: "Sponsor",
     target: "_self",
-    uri: "/sponsor",
+    uri: URLS.SPONSOR,
     disabled: true,
   },
   {
     label: "Demo Day",
     target: "_self",
-    uri: "/demo-day",
+    uri: URLS.DEMO_DAY,
     disabled: false,
   },
   {
     label: "Travel",
     target: "_self",
-    uri: "/travel",
+    uri: URLS.TRAVEL,
     disabled: true,
   },
 ]

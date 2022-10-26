@@ -11,13 +11,7 @@ type ButtonProps = {
 }
 
 const Button = (props: ButtonProps) => {
-  const {
-    className = "",
-    children,
-    onClick,
-    disabled = false,
-    size = "normal",
-  } = props
+  const { className = "", children, onClick, disabled = false, size } = props
 
   return (
     <button

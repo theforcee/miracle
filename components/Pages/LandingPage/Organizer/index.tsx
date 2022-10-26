@@ -1,18 +1,19 @@
 import clsx from "clsx"
 import Image from "next/image"
 import React from "react"
-import BorderAnimation from "../../../Base/BorderAnimation"
+import Button from "../../../Base/Button"
+import GradientBorder from "../../../Base/GradientBorder"
 import { landingPageStyles } from "../../styles"
 import logoIcetea from "/public/images/logo-icetea.svg"
 
 const OrganizorBox = () => {
   return (
     <div>
-      <BorderAnimation>
+      <GradientBorder>
         <div className="relative w-[120px] 3xs:w-[154px]">
           <Image src={logoIcetea} layout="responsive" alt="" />
         </div>
-      </BorderAnimation>
+      </GradientBorder>
     </div>
   )
 }
@@ -52,6 +53,11 @@ const Organizer = () => {
           .map((item, index) => {
             return <OrganizorBox key={item + index} />
           })}
+      </div>
+      <div className="flex justify-center mt-20">
+        <Button className="text-21/27 px-6 py-[10px] rounded-[100px] font-bold">
+          Request a package
+        </Button>
       </div>
     </div>
   )
