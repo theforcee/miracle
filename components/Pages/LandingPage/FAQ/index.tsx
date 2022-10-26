@@ -82,6 +82,7 @@ const faqs: Array<FaqTypes> = [
           target="_blank"
           rel="noreferrer"
           className={hyperlinkStyles}
+          onClick={(e) => e.stopPropagation()}
         >
           https://t.me/Web3BuilderInfo
         </a>
@@ -103,6 +104,7 @@ const faqs: Array<FaqTypes> = [
           target="_blank"
           rel="noreferrer"
           className={hyperlinkStyles}
+          onClick={(e) => e.stopPropagation()}
         >
           https://t.me/Web3BuilderInfo
         </a>
@@ -131,6 +133,7 @@ const faqs: Array<FaqTypes> = [
             target="_blank"
             rel="noreferrer"
             className={hyperlinkStyles}
+            onClick={(e) => e.stopPropagation()}
           >
             Here
           </a>{" "}
@@ -154,6 +157,7 @@ const faqs: Array<FaqTypes> = [
             target="_blank"
             rel="noreferrer"
             className={hyperlinkStyles}
+            onClick={(e) => e.stopPropagation()}
           >
             here
           </a>
