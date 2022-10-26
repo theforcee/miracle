@@ -19,7 +19,7 @@ const LandingPage = () => {
         <Ticket />
         <Attendees />
         <Expect />
-        <Speaker />
+        {/* <Speaker />  */}
         <Organizer />
         <FAQ />
         <Schedule />

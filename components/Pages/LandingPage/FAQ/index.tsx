@@ -104,8 +104,8 @@ const FAQ = () => {
                       <span className="flex-1 text-left">{item.question}</span>
                       <div
                         className={clsx(
-                          "relative w-8 h-8 flex rounded-full justify-center items-center transition",
-                          "bg-[#44C4EC33]",
+                          "relative w-8 h-8 flex rounded-full justify-center items-center transition bg-[#44C4EC33]",
+                          open && "rotate-180",
                         )}
                       >
                         <Image src={iconArrow} alt="" />

@@ -2,7 +2,19 @@ import { Autoplay, Lazy, Navigation, Pagination } from "swiper"
 import "swiper/css"
 import { Swiper } from "swiper/react"
 
-const BaseSwiper = (props: any) => {
+type BaseSwiperProps = {
+  children: JSX.Element[]
+  showNavigation?: boolean
+  showPagination?: boolean
+}
+
+const BaseSwiper = (props: BaseSwiperProps) => {
+  const { children, showPagination = false, showNavigation = false } = props
+  const pagination = showPagination
+    ? {
+        clickable: true,
+      }
+    : false
   return (
     <Swiper
       slidesPerView={1}
@@ -12,13 +24,11 @@ const BaseSwiper = (props: any) => {
       }}
       loop
       lazy
-      pagination={{
-        clickable: true,
-      }}
-      navigation
+      pagination={pagination}
+      navigation={showNavigation}
       modules={[Lazy, Autoplay, Pagination, Navigation]}
     >
-      {props.children}
+      {children}
     </Swiper>
   )
 }

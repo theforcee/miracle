@@ -85,7 +85,7 @@ const BannerHome = () => {
             <Image src={imgMiracleBlockVertical} alt="" />
           </div>
           <div className="max-w-[276px] flex flex-col sm:max-w-full opacity-80">
-            <span className="mt-6 font-medium text-16/22 md:text-22/34">
+            <span className="uppercase mt-6 font-medium text-16/22 md:text-22/34">
               Where global investors meet Web3 SEA builders
             </span>
             <span className="font-medium text-16/18 mt-2 md:mt-0 md:text-xl">

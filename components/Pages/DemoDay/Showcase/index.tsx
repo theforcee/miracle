@@ -72,8 +72,8 @@ const Showcase = () => {
           directly!
         </span>
       </div>
-      <div className="mt-10">
-        <BaseSwiper>
+      <div className="mt-10" id="showcase">
+        <BaseSwiper showNavigation={true}>
           {showcases.map((showcase) => (
             <SwiperSlide style={{ height: "100%" }} key={showcase.title}>
               <div className="relative rounded-xl">

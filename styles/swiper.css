@@ -1,19 +1,19 @@
-.swiper .swiper-pagination-bullet {
+#showcase .swiper-pagination-bullet {
   background-color: #fff;
 }
 
-.swiper .swiper-button-next {
+#showcase .swiper-button-next {
   right: 20px;
   background-image: url("/images/icon-arrow-right.svg");
 }
 
-.swiper .swiper-button-prev {
+#showcase .swiper-button-prev {
   left: 20px;
   background-image: url("/images/icon-arrow-left.svg");
 }
 
-.swiper .swiper-button-next,
-.swiper .swiper-button-prev {
+#showcase .swiper-button-next,
+#showcase .swiper-button-prev {
   background-color: rgba(165, 250, 255, 0.2);
   color: white;
   height: 44px;
@@ -26,12 +26,12 @@
   background-position: center;
 }
 
-.swiper .swiper-button-next:hover,
-.swiper .swiper-button-prev:hover {
+#showcase .swiper-button-next:hover,
+#showcase .swiper-button-prev:hover {
   background-color: rgba(165, 250, 255, 0.5);
 }
 
-.swiper .swiper-button-next:after,
-.swiper .swiper-button-prev:after {
+#showcase .swiper-button-next:after,
+#showcase .swiper-button-prev:after {
   content: "";
 }
