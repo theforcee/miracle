@@ -109,7 +109,7 @@ const Expect = () => {
                 </div>
               </div>
               <div className="relative w-full rounded-[20px] mt-4 md:mt-0 md:max-w-[508px]">
-                <Image src={expect.img} alt="" layout="responsive" />
+                <Image src={expect.img} alt="" layout="responsive" priority />
               </div>
               <div className="flex justify-center items-center sm:hidden">
                 <SwiperButtons />
