@@ -55,15 +55,15 @@ const Schedule = () => {
         </span>
         <div className="flex-1 py-[18px] pr-[26px]">
           {schedules.morning.map((schedule) => (
-            <>
+            <React.Fragment key={schedule.time}>
               <div className="first:hidden h-[0.5px] bg-white opacity-60"></div>
-              <div key={schedule.time} className="flex text-lg py-1.5">
+              <div className="flex text-lg py-1.5">
                 <span className="w-[130px] font-semibold ml-6">
                   {schedule.time}
                 </span>
                 <span className="flex-1 font-medium">{schedule.content}</span>
               </div>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
@@ -75,15 +75,15 @@ const Schedule = () => {
         </span>
         <div className="flex-1 py-[18px] pr-[26px]">
           {schedules.afternoon.map((schedule) => (
-            <>
+            <React.Fragment key={schedule.time}>
               <div className="first:hidden h-[0.5px] bg-white opacity-60"></div>
-              <div key={schedule.time} className="flex text-lg py-1.5">
+              <div className="flex text-lg py-1.5">
                 <span className="w-[130px] font-semibold ml-6">
                   {schedule.time}
                 </span>
                 <span className="flex-1 font-medium">{schedule.content}</span>
               </div>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
