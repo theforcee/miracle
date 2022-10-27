@@ -8,17 +8,25 @@ import Button from "../Button"
 
 import logo from "/public/logo.svg"
 
+const heightDefault = 100
+const heightScrolled = 80
 const HeaderDefaultLayout = (props: any) => {
   const { asPath } = useRouter()
   const [scrollPosition, setScrollPosition] = useState<number>(0)
   const [opacity, setOpacity] = useState<number>(0)
+  const [height, setHeight] = useState<number>(heightDefault)
   const maxYOffset = 1000
   const [open, setOpen] = useState<boolean>(false)
 
   useEffect(() => {
     if (scrollPosition > maxYOffset) return
-    let newOpacity = scrollPosition / maxYOffset - 0.4
+    let newOpacity = scrollPosition / maxYOffset - 0.2
+    const newHeight =
+      heightDefault -
+      scrollPosition / (maxYOffset / (heightDefault - heightScrolled))
+
     setOpacity(newOpacity)
+    setHeight(newHeight)
   }, [scrollPosition])
 
   const handleScroll = () => {
@@ -77,9 +85,10 @@ const HeaderDefaultLayout = (props: any) => {
 
   return (
     <div
-      className={clsx("w-full fixed top-0 -translate-x-1/2 left-1/2 z-50 h-20")}
+      className={clsx("w-full fixed top-0 -translate-x-1/2 left-1/2 z-50")}
       style={{
-        background: `rgba(50,50,50,${opacity})`,
+        background: `rgba(28, 45, 96,${opacity})`,
+        height: height,
       }}
     >
       <nav

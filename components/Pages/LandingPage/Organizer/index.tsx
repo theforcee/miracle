@@ -9,7 +9,7 @@ import logoIcetea from "/public/images/logo-icetea.svg"
 const OrganizorBox = () => {
   return (
     <div>
-      <GradientBorder>
+      <GradientBorder className="flex items-center justify-center py-[26.5px] px-5 rounded-[10px] cursor-pointer 3xs:py-[34px] 3xs:px-[26px]">
         <div className="relative w-[120px] 3xs:w-[154px]">
           <Image src={logoIcetea} layout="responsive" alt="" />
         </div>

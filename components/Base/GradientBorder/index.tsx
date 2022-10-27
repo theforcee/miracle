@@ -11,7 +11,7 @@ const GradientBorder = (props: GradientBorderTypes) => {
   const { children, className = "" } = props
 
   return (
-    <div className={clsx(styles.box, className)}>
+    <div className={clsx(styles.gradientBorder, className)}>
       <div>{children}</div>
     </div>
   )

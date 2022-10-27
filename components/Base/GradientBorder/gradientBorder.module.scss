@@ -1,12 +1,4 @@
-.box {
-  width: inherit;
-  padding: 26.5px 20px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
+.gradientBorder {
   background: linear-gradient(#0f1519, #0f1519) padding-box,
     linear-gradient(
         311.41deg,
@@ -15,10 +7,5 @@
         rgba(255, 208, 20, 0.5) 74.51%
       )
       border-box;
-  border-radius: 10px;
   border: 0.84px solid transparent;
-
-  @media (min-width: theme("screens.3xs")) {
-    padding: 34px 26px;
-  }
 }

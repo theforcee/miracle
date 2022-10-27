@@ -144,7 +144,7 @@ const faqs: Array<FaqTypes> = [
   },
   {
     id: 10,
-    question: "10. Is there anything else to do before and after the event?",
+    question: "10. Is there anything else to do before & after the event?",
     answer: (
       <>
         <span className="block mb-2">
