@@ -21,8 +21,8 @@ const LandingPage = () => {
         <Expect />
         {/* <Speaker />  */}
         <Organizer />
-        <FAQ />
         <Schedule />
+        <FAQ />
       </div>
     </div>
   )

@@ -16,7 +16,7 @@ const expects = [
     img: imgExpect1,
     title: "Conference",
     description:
-      "We bring together world-class speakers and industry experts to create a forum for the exchange of ideas and experiences on current state of the Blockchain, Gamefi, NFT, Metaverse, DeFi. Join us to attend +10 sessions, panels talk, keynotes and fireside chats from the brightest brains of the industry",
+      "We bring together world-class speakers and industry experts to create a forum for the exchange of ideas and experiences on current state of the Blockchain, Gamefi, NFT, Metaverse, DeFi. Join us to attend +10 sessions, panels talk, keynotes and fireside chats from the brightest brains of the industry ",
   },
   {
     img: imgExpect2,
@@ -97,9 +97,9 @@ const Expect = () => {
                 </h4>
                 <p
                   className={clsx(
-                    "mt-1 xs:mt-2 text-13/18 font-normal",
+                    "mt-1 xs:mt-2 text-13/18 font-light",
                     "xs:text-base",
-                    "md:text-20/26",
+                    "md:text-20/26 md:font-normal md:text-justify md:tracking-[0.01em]",
                   )}
                 >
                   {expect.description}
