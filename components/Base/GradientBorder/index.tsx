@@ -1,18 +1,23 @@
 import clsx from "clsx"
-import React from "react"
 import styles from "./gradientBorder.module.scss"
 
 type GradientBorderTypes = {
   children: any
   className?: string
+  borderAnimation?: boolean
 }
 
 const GradientBorder = (props: GradientBorderTypes) => {
-  const { children, className = "" } = props
+  const { children, className = "", borderAnimation = false } = props
 
   return (
-    <div className={clsx(styles.gradientBorder, className)}>
-      <div>{children}</div>
+    <div
+      className={clsx(
+        borderAnimation ? styles.borderAnimation : styles.gradientBorder,
+        className,
+      )}
+    >
+      {children}
     </div>
   )
 }

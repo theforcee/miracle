@@ -55,6 +55,7 @@ module.exports = {
       "13/24": ["13px", { lineHeight: "24px" }],
       "14/18": ["14px", { lineHeight: "18px" }],
       "14/20": ["14px", { lineHeight: "20px" }],
+      "15/21": ["15px", { lineHeight: "21px" }],
       "16/18": ["16px", { lineHeight: "18px" }],
       "16/20": ["16px", { lineHeight: "20px" }],
       "16/22": ["16px", { lineHeight: "22px" }],

@@ -6,10 +6,16 @@ type BaseSwiperProps = {
   children: JSX.Element[]
   showNavigation?: boolean
   showPagination?: boolean
+  handleSlideChange: (data: any) => void
 }
 
 const BaseSwiper = (props: BaseSwiperProps) => {
-  const { children, showPagination = false, showNavigation = false } = props
+  const {
+    children,
+    showPagination = false,
+    showNavigation = false,
+    handleSlideChange,
+  } = props
   const pagination = showPagination
     ? {
         clickable: true,
@@ -19,7 +25,7 @@ const BaseSwiper = (props: BaseSwiperProps) => {
     <Swiper
       slidesPerView={1}
       autoplay={{
-        delay: 5000,
+        delay: 100,
         disableOnInteraction: false,
       }}
       loop
@@ -27,6 +33,7 @@ const BaseSwiper = (props: BaseSwiperProps) => {
       pagination={pagination}
       navigation={showNavigation}
       modules={[Lazy, Autoplay, Pagination, Navigation]}
+      onSlideChangeTransitionEnd={handleSlideChange}
     >
       {children}
     </Swiper>

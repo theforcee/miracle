@@ -9,3 +9,51 @@
       border-box;
   border: 0.84px solid transparent;
 }
+
+.borderAnimation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.borderAnimation > * {
+  z-index: 2;
+}
+
+.borderAnimation::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 260%;
+  background: linear-gradient(
+      311.41deg,
+      #43d2ff 5.85%,
+      rgba(165, 250, 255, 0.03) 63.28%,
+      rgba(255, 208, 20, 0.5) 74.51%
+    ),
+    linear-gradient(0deg, rgba(165, 250, 255, 0.1), rgba(165, 250, 255, 0.1));
+  animation: rotate 6s linear infinite;
+  @media (min-width: theme("screens.xs")) {
+    width: 480px;
+    height: 160%;
+  }
+}
+
+.borderAnimation::after {
+  content: "";
+  position: absolute;
+  background: #0f1519;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -35,3 +35,10 @@
 #showcase .swiper-button-prev:after {
   content: "";
 }
+
+@media (max-width: 900px) {
+  #showcase .swiper-button-next,
+  #showcase .swiper-button-prev {
+    visibility: hidden;
+  }
+}

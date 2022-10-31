@@ -1,13 +1,13 @@
+import clsx from "clsx"
 import Image from "next/image"
-import React from "react"
 import GradientBorder from "../../../Base/GradientBorder"
 import { landingPageStyles } from "../../styles"
-import imgGummy from "/public/images/demo-day/project-gummy.png"
 import imgEternal from "/public/images/demo-day/project-eternal.png"
+import imgGummy from "/public/images/demo-day/project-gummy.png"
+import imgHashbon from "/public/images/demo-day/project-hashbon.png"
+import imgTooNft from "/public/images/demo-day/project-toonft.png"
 import imgTrouble from "/public/images/demo-day/project-trouble.png"
 import imgVictory from "/public/images/demo-day/project-victory.png"
-import imgTooNft from "/public/images/demo-day/project-toonft.png"
-import imgHashbon from "/public/images/demo-day/project-hashbon.png"
 
 const projects = [
   {
@@ -55,23 +55,41 @@ type IProjectCardProps = {
 const ProjectCard = (props: IProjectCardProps) => {
   const { project } = props
   return (
-    <GradientBorder className="flex flex-col py-6 px-5 rounded-xl cursor-pointer">
-      <div className="relative w-full">
-        <Image src={project.image} alt="" layout="responsive" />
+    <GradientBorder
+      className="py-5 md:py-6 px-5 rounded-xl after:rounded-xl cursor-pointer transition hover:-translate-y-2"
+      borderAnimation
+    >
+      <div className="self-start">
+        <div className="relative w-full">
+          <Image src={project.image} alt="" layout="responsive" />
+        </div>
+        <span
+          className={clsx(
+            "text-20/26 font-semibold mt-1 block",
+            "md:text-22/28 md:mt-2",
+          )}
+        >
+          {project.title}
+        </span>
+        <p className="text-15/21 md:text-16/22 mt-1 font-light">
+          {project.desc}
+        </p>
       </div>
-      <span className="text-22/28 font-semibold mt-2 block">
-        {project.title}
-      </span>
-      <p className="text-16/22 mt-1 font-light">{project.desc}</p>
     </GradientBorder>
   )
 }
 
 const TopProject = () => {
   return (
-    <div className="mt-[120px]">
+    <div className="mt-[60px] xs:mt-20 md:mt-[120px]">
       <h3 className={landingPageStyles.heading3}>ILAP Top 6 Projects</h3>
-      <div className="grid grid-cols-3 gap-6 mt-[60px]">
+      <div
+        className={clsx(
+          "grid grid-cols-1 gap-6 mt-8 ",
+          "xs:mt-10 xs:grid-cols-2",
+          "md:mt-[60px] md:grid-cols-3",
+        )}
+      >
         {projects.map((project: any) => (
           <ProjectCard key={project.id} project={project} />
         ))}
