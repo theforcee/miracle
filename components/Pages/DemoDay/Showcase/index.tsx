@@ -85,7 +85,6 @@ const Showcase = () => {
 
     // Start play video from start
     if (showcases[realIndex].videoSource) {
-      console.log("doi chay video xiu", swiper)
       swiper.autoplay.stop()
       const currentVideo = videoRefs.current[realIndex]
       currentVideo.currentTime = 0
@@ -134,6 +133,7 @@ const Showcase = () => {
                 {showcase.videoSource && (
                   <div className="w-full">
                     <video
+                      muted
                       ref={(element) => {
                         videoRefs.current[index] = element
                       }}

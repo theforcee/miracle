@@ -121,7 +121,9 @@ const HeaderDefaultLayout = (props: any) => {
             </Link>
           ))}
           <Link href="#">
-            <Button size="normal">Buy Ticket</Button>
+            <a>
+              <Button size="normal">Buy Ticket</Button>
+            </a>
           </Link>
         </div>
         <div

@@ -45,7 +45,7 @@ const DefaultLayout = (props: LayoutProps) => {
         <meta name="twitter:image" content={image || defaultImage} />
       </Head>
 
-      <HeaderDefaultLayout isWriterPage />
+      <HeaderDefaultLayout />
       <MainDefaultLayout>{children}</MainDefaultLayout>
       <FooterDefaultLayout />
     </>
