@@ -62,6 +62,7 @@ const showcases = [
 
 const Showcase = () => {
   const videoRefs = useRef([])
+  const [swiperRef, setSwiperRef] = useState(null)
 
   const handlePlayVideo = (index: any) => {
     const currentVideo = videoRefs?.current[index]
@@ -94,6 +95,11 @@ const Showcase = () => {
     }
   }
 
+  const handleVideoEnded = () => {
+    swiperRef.slideNext()
+    swiperRef.autoplay.start()
+  }
+
   return (
     <div>
       <h3 className={landingPageStyles.heading3}>ILAP startups showcase</h3>
@@ -114,10 +120,14 @@ const Showcase = () => {
         </span>
       </div>
       <div className="mt-5 md:mt-10" id="showcase">
-        <BaseSwiper showNavigation={true} handleSlideChange={handleSlideChange}>
+        <BaseSwiper
+          showNavigation={true}
+          handleSlideChange={handleSlideChange}
+          setSwiperRef={setSwiperRef}
+        >
           {showcases.map((showcase, index) => (
             <SwiperSlide style={{ height: "100%" }} key={showcase.title}>
-              <div className="relative rounded-xl overflow-hidden group">
+              <div className="relative rounded-xl overflow-hidden group transition">
                 {showcase.banner && (
                   <Image src={showcase.banner} layout="responsive" alt="" />
                 )}
@@ -127,6 +137,7 @@ const Showcase = () => {
                       ref={(element) => {
                         videoRefs.current[index] = element
                       }}
+                      onEnded={handleVideoEnded}
                     >
                       <source src="/images/demo-day/victory-point-office.mp4" />
                     </video>
@@ -134,7 +145,7 @@ const Showcase = () => {
                 )}
                 {showcase.videoSource && (
                   <div
-                    className="group-hover:visible invisible absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                    className="transition group-hover:visible invisible absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                     onClick={() => {
                       handlePlayVideo(index)
                     }}
