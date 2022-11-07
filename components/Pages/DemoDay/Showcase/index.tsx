@@ -61,11 +61,13 @@ const showcases = [
 ]
 
 const Showcase = () => {
-  const videoRefs = useRef([])
-  const [swiperRef, setSwiperRef] = useState(null)
+  const videoRefs = useRef<any>([])
+  const [swiperRef, setSwiperRef] = useState<any>(null)
 
   const handlePlayVideo = (index: any) => {
-    const currentVideo = videoRefs?.current[index]
+    const currentVideo: any = videoRefs?.current[index]
+
+    if (!currentVideo) return
 
     if (!currentVideo.paused) currentVideo.pause()
     else currentVideo.play()
@@ -124,7 +126,7 @@ const Showcase = () => {
           handleSlideChange={handleSlideChange}
           setSwiperRef={setSwiperRef}
         >
-          {showcases.map((showcase, index) => (
+          {showcases.map((showcase, index: number) => (
             <SwiperSlide style={{ height: "100%" }} key={showcase.title}>
               <div className="relative rounded-xl overflow-hidden group transition">
                 {showcase.banner && (
@@ -134,7 +136,7 @@ const Showcase = () => {
                   <div className="w-full">
                     <video
                       muted
-                      ref={(element) => {
+                      ref={(element: any) => {
                         videoRefs.current[index] = element
                       }}
                       onEnded={handleVideoEnded}
